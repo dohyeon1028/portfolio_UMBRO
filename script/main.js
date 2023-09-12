@@ -149,4 +149,14 @@ if(window.innerWidth > 767){
     });
     items_wrap.innerHTML = article;
     console.log(article)
+    //recommend
+
+    //fullbanner
+    const full_banner = document.querySelector("#full_banner");
+    let eventTitle = `<h1>EVENT</h1>`;
+    
+    let event = document.createElement("h1");
+    console.log(event);
+    event.innerText = "event"
+    full_banner.prepend(event);
 }
