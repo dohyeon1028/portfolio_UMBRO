@@ -1,0 +1,223 @@
+#football{
+    width: 100vw;
+    #frame{
+        width: 100%;
+        height: 740px;
+        position: relative;
+        margin-bottom: 150px;
+        .panel{
+            width: calc(100% * 4);
+            height: 100%;
+            position: absolute;
+            display: flex;
+            li{
+                width: 100vw;
+                height: 100%;
+            }
+        }
+        
+    }
+    section{
+        position: relative;
+        width: 1440px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        margin-bottom: 200px;
+        article{
+            width: 700px;
+            height: 450px;
+            cursor: pointer;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .ball{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 324px;
+            height: 340px;
+            opacity: 0;
+            transform-origin: center center;
+            transition: 2s;
+            transform: translate(-50%, -50%) rotate(0deg);
+            perspective: 700px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;                
+                
+            }
+            &.on{
+                opacity: 1;
+                transform: translate(-50%, -50%) rotate(1080deg);
+            }
+        }
+    }
+    .custom_zone{
+        width: 1440px;
+        min-height: 900px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+
+        figure{
+            width: 711.18px;
+            height: 669.87px;;
+            border: 1px solid #000;
+            overflow: hidden;
+            position: relative;
+            img {
+                display: block;
+                width: 650px;
+                height: 400px;
+                margin: 40px auto 0;
+                object-fit: cover;
+            }
+    
+            .con{
+                position: absolute;
+                top: 65%;
+                left: 30px;
+                width: 640px;
+                margin: 40px auto 0;
+    
+                h2{
+                    font: bold 40px/1 "Phudu";
+                    letter-spacing: 1px;
+                    margin-bottom: 15px;
+                    width: 100%;
+                    // text-overflow: ellipsis;
+                }
+    
+                p{
+                    font: bold 18px/1 "Phudu";
+                    letter-spacing: 1px;
+                    margin-bottom: 30px;
+                }
+    
+                a{
+                    display: block;
+                    width: 200px;
+                    height: 50px;
+                    font: bold 20px/50px "Phudu";
+                    text-align: center;
+                    background-color: #000;
+                    border: 1px solid #000;
+                    color: #fff;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: #fff;
+                        color: #000;
+                    }
+                }
+            }
+        
+        }
+
+        .vidList {
+            width: 711.18px;
+            height: 669.87px;
+            flex-wrap: wrap;
+            position: relative;
+            overflow: hidden;
+
+            .video_frame{
+                width: 400%;
+                height: 100%;
+                position: absolute;
+                left: 0%;
+
+                article {
+                    position: absolute;
+                    width: 25%;
+                    height: 100%;
+                    .bg{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        z-index: -1;
+                    }
+                    
+                    .pic{
+                        display: block;
+                        margin: 80px auto 0;
+                        width: 650px;
+                        height: 350px;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            border-radius: 15px;
+                        }
+                    }
+            
+                    .con{
+                        width: 640px;
+                        margin: 40px auto 0;
+                        position: absolute;
+                        top: 65%;
+                        left: 30px;
+            
+                        h2{
+                            font: bold 40px/1 "Phudu";
+                            letter-spacing: 1px;
+                            margin-bottom: 15px;
+                            width: 100%;
+                            // text-overflow: ellipsis;
+                        }
+            
+                        p{
+                            font: bold 18px/1 "Phudu";
+                            letter-spacing: 1px;
+                            margin-bottom: 30px;
+                        }
+            
+                        a{
+                            display: block;
+                            width: 200px;
+                            height: 50px;
+                            font: bold 20px/50px "Phudu";
+                            text-align: center;
+                            background-color: #000;
+                            border: 1px solid #000;
+                            color: #fff;
+                            cursor: pointer;
+                            &:hover{
+                                background-color: #fff;
+                                color: #000;
+                            }
+                        }
+                    }
+                }
+            }
+            .pop{
+                width: 100vw;
+                height: 100vh;
+                position: fixed;
+                top: 0; left: 0;
+                background-color: rgba(0, 0, 0, 0.8);
+                overflow: hidden;
+                padding: 5vh 5vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+        
+                .btnClose{
+                    position: absolute;
+                    top: 50px;
+                    right: 50px;
+                    color: #fff;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

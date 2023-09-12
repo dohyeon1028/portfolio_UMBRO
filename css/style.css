@@ -1,0 +1,2262 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Phudu&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.headerBox {
+  width: 100%;
+  height: 150px;
+}
+.headerBox.on {
+  height: 75px;
+}
+
+header {
+  width: 100vw;
+  height: 150px;
+  display: flex;
+  justify-content: space-evenly;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: #fff;
+  transition: 0.5s 0.2s;
+  border-bottom: 1px solid #aaa;
+  overflow: hidden;
+}
+header h1 {
+  width: 200px;
+  height: 75%;
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+header h1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  cursor: pointer;
+}
+header #gnb {
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+header #gnb li {
+  width: 200px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header #gnb li a {
+  font: bold 20px/1 "Phudu";
+  letter-spacing: 1px;
+  position: relative;
+}
+header #gnb li a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  opacity: 0;
+  position: absolute;
+  bottom: -20px;
+  left: 0%;
+  transition: 0.5s;
+}
+header #gnb li a:hover::after {
+  width: 100%;
+  opacity: 1;
+  background-color: #333;
+}
+header .util {
+  width: 250px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  left: 88%;
+  transform: translate(-50%, -50%);
+}
+header .util li {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .util li a {
+  font: 12px/1 "arial";
+}
+header .util li a:first-child {
+  font-weight: bold;
+}
+header .bars {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: none;
+}
+header .bars .fa-bars {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%);
+}
+
+aside {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  right: -120%;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: row-reverse;
+}
+aside .inner {
+  width: 80%;
+  height: 100%;
+  background-color: #ddd;
+  position: relative;
+}
+aside .inner .close {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+aside .inner .close .fa-x {
+  font-size: 20px;
+}
+aside .inner #gnb {
+  width: 80%;
+  padding: 10px 0;
+  position: absolute;
+  top: 100px;
+  left: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+aside .inner #gnb li {
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #aaa;
+}
+aside .inner #gnb li a {
+  font: bold 18px/1 "Phudu";
+}
+aside .inner .util {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  display: flex;
+  gap: 20px;
+}
+aside .inner .util li a {
+  font: 16px/1 "Phudu";
+  letter-spacing: -1px;
+}
+aside .inner .util li i {
+  display: none;
+}
+
+@media screen and (max-width: 1179px) {
+  .headerBox {
+    width: 100%;
+    height: 150px;
+  }
+  .headerBox.on {
+    height: 75px;
+  }
+  header {
+    width: 100vw;
+    height: 150px;
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+  }
+  header h1 {
+    width: 150px;
+    left: 8%;
+  }
+  header #gnb {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+  }
+  header #gnb li {
+    width: 130px;
+  }
+  header #gnb li a {
+    font: bold 18px/1 "Phudu";
+    letter-spacing: 0px;
+  }
+  header #gnb li a::after {
+    bottom: -10px;
+  }
+  header .util {
+    width: 220px;
+    left: 85%;
+  }
+  header .util li a {
+    font: 10px/1 "arial";
+  }
+}
+@media screen and (max-width: 767px) {
+  .headerBox {
+    height: 0px;
+  }
+  .headerBox.on {
+    height: 0px;
+  }
+  header {
+    width: 100vw;
+    height: 75px;
+    position: relative;
+  }
+  header h1 {
+    width: 200px;
+    height: 75%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  header h1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    cursor: pointer;
+  }
+  header #gnb {
+    display: none;
+  }
+  header .util {
+    display: none;
+  }
+  header .bars {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: block;
+  }
+  header .bars .fa-bars {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  aside {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    right: -200%;
+    display: flex;
+    flex-direction: row-reverse;
+    transition: 1s;
+  }
+  aside .inner {
+    width: 90%;
+    height: 100%;
+    background-color: #eee;
+    position: relative;
+  }
+  aside .inner .close {
+    width: 10%;
+    height: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: -10%;
+  }
+  aside .inner .close .fa-x {
+    font-size: 5vw;
+  }
+  aside .inner #gnb {
+    width: 80%;
+    padding: 10px 0;
+    position: absolute;
+    top: 100px;
+    left: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  aside .inner #gnb li {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #aaa;
+  }
+  aside .inner #gnb li a {
+    font: bold 18px/1 "Phudu";
+  }
+  aside .inner .util {
+    width: 100%;
+    height: 75px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-left: 40px;
+  }
+  aside .inner .util li {
+    color: #eee;
+  }
+  aside .inner .util li a {
+    font: 16px/1 "Phudu";
+    letter-spacing: -1px;
+    color: #eee;
+  }
+  aside .inner .util li i {
+    display: none;
+  }
+}
+#frame {
+  position: relative;
+  width: 100%;
+  height: 56.25vw;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+#frame .panel {
+  height: 100%;
+  position: absolute;
+  display: flex;
+  left: -100vw;
+  cursor: pointer;
+}
+#frame .panel li {
+  width: 100vw;
+  height: 100%;
+}
+#frame .panel li img {
+  width: 100%;
+  height: 100%;
+}
+
+#banner {
+  width: 1440px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+#banner .imgBox {
+  width: 100%;
+  height: 118.62px;
+}
+#banner .imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#banner .item_wrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#banner .item_wrap .videoBox {
+  width: 927.97px;
+  height: 572.2px;
+}
+#banner .item_wrap .videoBox video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#banner .item_wrap .imgBox {
+  width: 572.2px;
+  height: 572.2px;
+  overflow: hidden;
+  position: relative;
+}
+#banner .item_wrap .imgBox .banner_slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: 0.5s;
+}
+#banner .item_wrap .imgBox .banner_slide li {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#banner .item_wrap .imgBox .banner_slide li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#banner .item_wrap .imgBox .btns {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+#banner .item_wrap .imgBox .btns li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 0.5px solid #999;
+}
+#banner .item_wrap .imgBox .btns li.on {
+  background-color: #000;
+  border: none;
+}
+
+#recommend {
+  width: 1440px;
+  height: 465.5px;
+  margin: 100px auto;
+  position: relative;
+}
+#recommend::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 0;
+  width: 1440px;
+  height: 2px;
+  background-color: #000;
+  z-index: -1;
+}
+#recommend h1 {
+  width: 600px;
+  background-color: #fff;
+  margin: 0 auto 100px;
+  display: block;
+  font: bold 30px/1 "Phudu";
+  letter-spacing: 1px;
+  text-align: center;
+}
+#recommend .items_wrap {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 100px;
+  overflow: hidden;
+}
+#recommend .items_wrap li {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#recommend .items_wrap li:nth-of-type(1) {
+  position: absolute;
+  left: -110vw;
+}
+#recommend .items_wrap li:nth-of-type(2) {
+  position: absolute;
+  left: 0vw;
+}
+#recommend .items_wrap li:nth-of-type(3) {
+  position: absolute;
+  left: 110vw;
+}
+#recommend .items_wrap li article {
+  height: 350px;
+  cursor: pointer;
+}
+#recommend .items_wrap li article img {
+  width: 270px;
+  height: 270px;
+  object-fit: cover;
+}
+#recommend .items_wrap li article:hover .txt p {
+  opacity: 1;
+  transform: translateY(0px);
+}
+#recommend .items_wrap li article .txt {
+  width: 260px;
+  height: 80px;
+  padding: 0 5px;
+}
+#recommend .items_wrap li article .txt p {
+  width: 100%;
+  opacity: 0;
+  transform: translateY(-25px);
+  transition: 0.5s;
+}
+#recommend .items_wrap li article .txt p.brand {
+  font: 12px/1 "Phudu";
+  color: #999;
+  margin-top: 20px;
+}
+#recommend .items_wrap li article .txt p.prod_title {
+  font: 14px/1 "Phudu";
+  color: #999;
+  margin-top: 10px;
+}
+#recommend .items_wrap li article .txt p.prod_price {
+  font: bold 14px/1 "Phudu";
+  color: #000;
+  margin-top: 5px;
+}
+#recommend .prev {
+  position: absolute;
+  top: 200px;
+  width: 31.25px;
+  height: 50px;
+  left: -50px;
+}
+#recommend .prev i {
+  font-size: 50px;
+}
+#recommend .next {
+  position: absolute;
+  top: 200px;
+  width: 31.25px;
+  height: 50px;
+  right: -50px;
+}
+#recommend .next i {
+  font-size: 50px;
+}
+
+#full_banner {
+  width: 100%;
+  overflow: hidden;
+}
+#full_banner section {
+  width: 1440px;
+  height: 900px;
+  margin: 0 auto;
+  position: relative;
+  transition: 0.5s;
+  overflow: hidden;
+}
+#full_banner section .imgBox {
+  width: 100%;
+  height: 600px;
+  margin-bottom: 40px;
+}
+#full_banner section .imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+#full_banner section .txtBox {
+  margin: 0 auto;
+}
+#full_banner section .txtBox h1 {
+  font: bold 40px/1 "Phudu";
+  text-align: center;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+#full_banner section .txtBox h2 {
+  font: 20px/1 "Phudu";
+  text-align: center;
+  letter-spacing: -2px;
+  color: #222;
+  margin-bottom: 30px;
+}
+#full_banner section a {
+  margin: 0 auto;
+  width: 180px;
+  height: 50px;
+  padding: 0 9px;
+  background-color: #fff;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font: 16px/1 "맑은 고딕";
+  letter-spacing: -1px;
+  color: #000;
+}
+#full_banner section a:hover {
+  background-color: #000;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+@media screen and (max-width: 1179px) {
+  #frame {
+    margin-bottom: 10px;
+  }
+  #frame .panel {
+    height: 100%;
+    position: absolute;
+    display: flex;
+    left: -100vw;
+    cursor: pointer;
+  }
+  #frame .panel li {
+    width: 100vw;
+    height: 100%;
+  }
+  #frame .panel li img {
+    width: 100%;
+    height: 100%;
+  }
+  #banner {
+    width: 100%;
+  }
+  #banner .imgBox {
+    height: 10vw;
+  }
+  #banner .item_wrap .videoBox {
+    width: 60%;
+    height: 42vw;
+  }
+  #banner .item_wrap .imgBox {
+    width: 40%;
+    height: 42vw;
+  }
+  #banner .item_wrap .imgBox .btns li {
+    display: none;
+  }
+  #recommend {
+    width: 90%;
+    height: 30vw;
+    margin: 50px auto;
+  }
+  #recommend::before {
+    width: 100%;
+  }
+  #recommend h1 {
+    width: 50%;
+    margin: 0 auto 20px;
+    font: bold 24px/1 "Phudu";
+  }
+  #recommend .items_wrap {
+    top: 70px;
+  }
+  #recommend .items_wrap li:nth-of-type(1) {
+    left: -110%;
+  }
+  #recommend .items_wrap li:nth-of-type(2) {
+    left: 0%;
+  }
+  #recommend .items_wrap li:nth-of-type(3) {
+    left: -110%;
+  }
+  #recommend .items_wrap li article {
+    width: 17vw;
+    height: 17vw;
+  }
+  #recommend .items_wrap li article:hover .txt p {
+    transform: translateY(-15px);
+  }
+  #recommend .items_wrap li article img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  #recommend .items_wrap li article .txt {
+    width: 100%;
+    padding: 0 2px;
+  }
+  #recommend .items_wrap li article .txt p {
+    opacity: 1;
+    transform: translateY(-15px);
+  }
+  #recommend .items_wrap li article .txt p.brand {
+    font: 10px/1 "Phudu";
+    margin-top: 20px;
+  }
+  #recommend .items_wrap li article .txt p.prod_title {
+    font: 12px/1 "Phudu";
+    margin-top: 7px;
+  }
+  #recommend .items_wrap li article .txt p.prod_price {
+    font: bold 12px/1 "Phudu";
+    margin-top: 2px;
+  }
+  #recommend .prev {
+    top: 150px;
+    left: -40px;
+  }
+  #recommend .prev i {
+    font-size: 30px;
+  }
+  #recommend .next {
+    top: 150px;
+    right: -40px;
+  }
+  #recommend .next i {
+    font-size: 30px;
+  }
+  #full_banner {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+  #full_banner section {
+    width: 100vw;
+    height: 56.25vw;
+  }
+  #full_banner section .imgBox {
+    margin-bottom: 20px;
+  }
+  #full_banner section .txtBox h1 {
+    font: bold 35px/1 "Phudu";
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+  }
+  #full_banner section .txtBox h2 {
+    font: 15px/1 "Phudu";
+    letter-spacing: -2px;
+    margin-bottom: 15px;
+  }
+  #full_banner section .btnBox {
+    width: 150px;
+    height: 40px;
+  }
+  #full_banner section .btnBox a {
+    font: 14px/1 "맑은 고딕";
+  }
+}
+@media screen and (max-width: 767px) {
+  body {
+    -ms-overflow-style: none;
+  }
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  #banner {
+    width: 100%;
+    background-color: #eee;
+    padding: 20px 0;
+  }
+  #banner .imgBox {
+    height: 9vw;
+  }
+  #banner .item_wrap {
+    width: 100%;
+    display: block;
+  }
+  #banner .item_wrap .videoBox {
+    width: 90vw;
+    height: 60vw;
+    margin: 20px auto;
+  }
+  #banner .item_wrap .imgBox {
+    width: 90vw;
+    height: 20vw;
+    margin: 0 auto;
+    overflow: visible;
+    position: static;
+  }
+  #banner .item_wrap .imgBox .banner_slide {
+    position: static;
+    display: flex;
+    justify-content: space-between;
+  }
+  #banner .item_wrap .imgBox .banner_slide li {
+    position: static;
+    width: 24%;
+  }
+  #banner .item_wrap .imgBox .btns {
+    display: none;
+  }
+  #recommend {
+    width: 90vw;
+    height: 42vw;
+    margin: 80px auto 30px;
+    position: relative;
+    overflow: hidden;
+  }
+  #recommend::before {
+    width: 90vw;
+  }
+  #recommend h1 {
+    width: fit-content;
+    padding: 0 30px;
+    margin: 0 auto 50px;
+    font: bold 24px/1 "Phudu";
+  }
+  #recommend .items_wrap {
+    width: 375%;
+    position: static;
+    top: 50px;
+    overflow: hidden;
+  }
+  #recommend .items_wrap::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  #recommend .items_wrap li {
+    width: 22.5vw;
+    padding: 10px;
+    display: block;
+    float: left;
+  }
+  #recommend .items_wrap li img {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+  }
+  #recommend .items_wrap li .txt {
+    width: 100%;
+    height: 10%;
+    padding: 0 5px;
+  }
+  #recommend .items_wrap li .txt p {
+    width: 100%;
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  #recommend .items_wrap li .txt p.brand {
+    font: 12px/1 "Phudu";
+    color: #999;
+    margin-top: 6px;
+  }
+  #recommend .items_wrap li .txt p.prod_title {
+    font: 14px/1 "Phudu";
+    color: #999;
+    margin-top: 4px;
+  }
+  #recommend .items_wrap li .txt p.prod_price {
+    font: bold 14px/1 "Phudu";
+    color: #000;
+    margin-top: 2px;
+  }
+  #recommend .items_wrap li:nth-of-type(1) {
+    position: static;
+    left: unset;
+  }
+  #recommend .items_wrap li:nth-of-type(2) {
+    position: static;
+    left: unset;
+  }
+  #recommend .items_wrap li:nth-of-type(3) {
+    position: static;
+    left: unset;
+  }
+  #recommend .prev {
+    position: absolute;
+    top: 48%;
+    width: 18.75px;
+    height: 30px;
+    left: -20px;
+  }
+  #recommend .prev i {
+    font-size: 30px;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  #recommend .next {
+    position: absolute;
+    top: 48%;
+    width: 18.75px;
+    height: 30px;
+    right: -20px;
+  }
+  #recommend .next i {
+    font-size: 30px;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  #full_banner {
+    width: 100%;
+    overflow: hidden;
+  }
+  #full_banner section {
+    width: 1440px;
+    height: 900px;
+    margin: 0 auto;
+    position: relative;
+    transition: 0.5s;
+    overflow: hidden;
+  }
+  #full_banner section .imgBox {
+    width: 100%;
+    height: 600px;
+    margin-bottom: 40px;
+  }
+  #full_banner section .imgBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+  }
+  #full_banner section .txtBox {
+    margin: 0 auto;
+  }
+  #full_banner section .txtBox h1 {
+    font: bold 40px/1 "Phudu";
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+  }
+  #full_banner section .txtBox h2 {
+    font: 20px/1 "Phudu";
+    text-align: center;
+    letter-spacing: -2px;
+    color: #222;
+    margin-bottom: 30px;
+  }
+  #full_banner section a {
+    margin: 0 auto;
+    width: 180px;
+    height: 50px;
+    padding: 0 9px;
+    background-color: #fff;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font: 16px/1 "맑은 고딕";
+    letter-spacing: -1px;
+    color: #000;
+  }
+  #full_banner section a:hover {
+    background-color: #000;
+    border: 1px solid #fff;
+    color: #fff;
+  }
+}
+.NEW_prod_wrap {
+  width: 100vw;
+  height: auto;
+  min-height: 100%;
+  padding-bottom: 450px;
+  padding: 50px 80px;
+  margin: 0 auto;
+}
+.NEW_prod_wrap .filter_wrap {
+  width: 250px;
+  height: 300px;
+  position: absolute;
+  top: 300px;
+  left: 60px;
+}
+.NEW_prod_wrap .filter_wrap .close {
+  position: absolute;
+  right: 0;
+  font-size: 20px;
+}
+.NEW_prod_wrap .filter_wrap > div {
+  width: 250px;
+  height: 50%;
+  border-bottom: 2px solid #aaa;
+  margin-bottom: 20px;
+}
+.NEW_prod_wrap .filter_wrap > div .filter_tit {
+  width: 100%;
+  font: bold 20px/1 "Phudu";
+  letter-spacing: 1.5px;
+  margin-bottom: 30px;
+}
+.NEW_prod_wrap .filter_wrap > div .filter_sublist {
+  display: flex;
+  flex-wrap: wrap;
+}
+.NEW_prod_wrap .filter_wrap > div .filter_sublist label {
+  width: 100%;
+  margin-bottom: 5px;
+}
+.NEW_prod_wrap .filter_wrap > div .filter_sublist label:hover span {
+  color: #111;
+}
+.NEW_prod_wrap .filter_wrap > div .filter_sublist label input {
+  width: 12px;
+  height: 12px;
+}
+.NEW_prod_wrap .filter_wrap > div .filter_sublist label span {
+  font: 13px/1 "arial";
+  color: #aaa;
+}
+@media screen and (max-width: 1179px) {
+  .NEW_prod_wrap .filter_wrap {
+    width: 150px;
+    height: 250px;
+    top: 200px;
+    left: 40px;
+  }
+  .NEW_prod_wrap .filter_wrap .close {
+    font-size: 18px;
+  }
+  .NEW_prod_wrap .filter_wrap > div {
+    width: 100%;
+    height: 50%;
+  }
+  .NEW_prod_wrap .filter_wrap > div .filter_tit {
+    font: bold 18px/1 "Phudu";
+    margin-bottom: 15px;
+  }
+  .NEW_prod_wrap .filter_wrap > div .filter_sublist label span {
+    font: 12px/1 "arial";
+  }
+}
+.NEW_prod_wrap .list_control_wrap {
+  width: calc(100% - 270px);
+  margin-left: 270px;
+}
+.NEW_prod_wrap .list_control_wrap h2 {
+  font: bold 30px/100px "Phudu";
+  height: 100px;
+  letter-spacing: 1px;
+}
+.NEW_prod_wrap .list_control_wrap h2 span {
+  color: #aaa;
+}
+.NEW_prod_wrap .list_control_wrap section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.NEW_prod_wrap .list_control_wrap section article {
+  width: 360px;
+  height: 660px;
+}
+.NEW_prod_wrap .list_control_wrap section article .imgBox {
+  width: 100%;
+  height: 490px;
+  background-color: #e4e6e9;
+  overflow: hidden;
+  position: relative;
+}
+.NEW_prod_wrap .list_control_wrap section article .imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: absolute;
+  transition: 0.5s;
+}
+.NEW_prod_wrap .list_control_wrap section article .imgBox img.before {
+  opacity: 1;
+}
+.NEW_prod_wrap .list_control_wrap section article .imgBox img.after {
+  opacity: 0;
+}
+.NEW_prod_wrap .list_control_wrap section article figcaption {
+  padding: 13px 15px 0;
+}
+.NEW_prod_wrap .list_control_wrap section article figcaption a {
+  font: 14px/1 "Phudu";
+  color: #999;
+}
+.NEW_prod_wrap .list_control_wrap section article figcaption p {
+  font: bold 14px/1 "Phudu";
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 1179px) {
+  .NEW_prod_wrap {
+    min-height: 100%;
+    padding: 0px 30px;
+    margin: 0 auto;
+  }
+  .NEW_prod_wrap .filter_wrap {
+    width: 250px;
+    height: 300px;
+    position: absolute;
+    top: 300px;
+    left: 60px;
+  }
+  .NEW_prod_wrap .filter_wrap .close {
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+  }
+  .NEW_prod_wrap .filter_wrap > div {
+    width: 250px;
+    height: 50%;
+    border-bottom: 2px solid #aaa;
+    margin-bottom: 20px;
+  }
+  .NEW_prod_wrap .filter_wrap > div .filter_tit {
+    width: 100%;
+    font: bold 20px/1 "Phudu";
+    letter-spacing: 1.5px;
+    margin-bottom: 30px;
+  }
+  .NEW_prod_wrap .filter_wrap > div .filter_sublist {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .NEW_prod_wrap .filter_wrap > div .filter_sublist label {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  .NEW_prod_wrap .filter_wrap > div .filter_sublist label:hover span {
+    color: #111;
+  }
+  .NEW_prod_wrap .filter_wrap > div .filter_sublist label input {
+    width: 12px;
+    height: 12px;
+  }
+  .NEW_prod_wrap .filter_wrap > div .filter_sublist label span {
+    font: 13px/1 "arial";
+    color: #aaa;
+  }
+}
+@media screen and (max-width: 1179px) and (max-width: 1179px) {
+  .NEW_prod_wrap .filter_wrap {
+    width: 150px;
+    height: 250px;
+    top: 200px;
+    left: 40px;
+  }
+  .NEW_prod_wrap .filter_wrap .close {
+    font-size: 18px;
+  }
+  .NEW_prod_wrap .filter_wrap > div {
+    width: 100%;
+    height: 50%;
+  }
+  .NEW_prod_wrap .filter_wrap > div .filter_tit {
+    font: bold 18px/1 "Phudu";
+    margin-bottom: 15px;
+  }
+  .NEW_prod_wrap .filter_wrap > div .filter_sublist label span {
+    font: 12px/1 "arial";
+  }
+}
+@media screen and (max-width: 1179px) {
+  .NEW_prod_wrap .list_control_wrap {
+    width: calc(100% - 230px);
+    margin-left: 230px;
+  }
+  .NEW_prod_wrap .list_control_wrap h2 {
+    font: bold 28px/80px "Phudu";
+    height: 80px;
+  }
+  .NEW_prod_wrap .list_control_wrap section {
+    width: 100%;
+  }
+  .NEW_prod_wrap .list_control_wrap section article {
+    width: calc(33.3333333333vw - 100px);
+    height: 33.3333333333vw;
+  }
+  .NEW_prod_wrap .list_control_wrap section article .imgBox {
+    height: calc(33.3333333333vw - 100px);
+  }
+  .NEW_prod_wrap .list_control_wrap section article figcaption {
+    padding: 10px 12px 0;
+  }
+  .NEW_prod_wrap .list_control_wrap section article figcaption a {
+    font: 12px/1 "Phudu";
+    color: #999;
+  }
+  .NEW_prod_wrap .list_control_wrap section article figcaption p {
+    font: bold 12px/1 "Phudu";
+    margin-top: 8px;
+  }
+}
+.BEST_prod_wrap {
+  width: 100vw;
+  height: auto;
+  min-height: 100%;
+  padding-bottom: 450px;
+  padding: 50px 80px;
+  margin: 0 auto;
+}
+.BEST_prod_wrap .filter_wrap {
+  width: 250px;
+  height: 300px;
+  position: absolute;
+  top: 300px;
+  left: 60px;
+}
+.BEST_prod_wrap .filter_wrap .close {
+  position: absolute;
+  right: 0;
+  font-size: 20px;
+}
+.BEST_prod_wrap .filter_wrap > div {
+  width: 250px;
+  height: 50%;
+  border-bottom: 2px solid #aaa;
+  margin-bottom: 20px;
+}
+.BEST_prod_wrap .filter_wrap > div .filter_tit {
+  width: 100%;
+  font: bold 20px/1 "Phudu";
+  letter-spacing: 1.5px;
+  margin-bottom: 30px;
+}
+.BEST_prod_wrap .filter_wrap > div .filter_sublist {
+  display: flex;
+  flex-wrap: wrap;
+}
+.BEST_prod_wrap .filter_wrap > div .filter_sublist label {
+  width: 100%;
+  margin-bottom: 5px;
+}
+.BEST_prod_wrap .filter_wrap > div .filter_sublist label:hover span {
+  color: #111;
+}
+.BEST_prod_wrap .filter_wrap > div .filter_sublist label input {
+  width: 12px;
+  height: 12px;
+}
+.BEST_prod_wrap .filter_wrap > div .filter_sublist label span {
+  font: 13px/1 "arial";
+  color: #aaa;
+}
+@media screen and (max-width: 1179px) {
+  .BEST_prod_wrap .filter_wrap {
+    width: 150px;
+    height: 250px;
+    top: 200px;
+    left: 40px;
+  }
+  .BEST_prod_wrap .filter_wrap .close {
+    font-size: 18px;
+  }
+  .BEST_prod_wrap .filter_wrap > div {
+    width: 100%;
+    height: 50%;
+  }
+  .BEST_prod_wrap .filter_wrap > div .filter_tit {
+    font: bold 18px/1 "Phudu";
+    margin-bottom: 15px;
+  }
+  .BEST_prod_wrap .filter_wrap > div .filter_sublist label span {
+    font: 12px/1 "arial";
+  }
+}
+.BEST_prod_wrap .list_control_wrap {
+  width: calc(100% - 270px);
+  margin-left: 270px;
+}
+.BEST_prod_wrap .list_control_wrap h2 {
+  font: bold 30px/100px "Phudu";
+  height: 100px;
+  letter-spacing: 1px;
+}
+.BEST_prod_wrap .list_control_wrap h2 span {
+  font: bold 24px/100px "Phudu";
+  color: #aaa;
+  margin-left: 10px;
+}
+.BEST_prod_wrap .list_control_wrap section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.BEST_prod_wrap .list_control_wrap section article {
+  width: 360px;
+  height: 660px;
+  position: relative;
+  transform: translateY(0);
+  opacity: 0;
+  transition-duration: 0.5s;
+}
+.BEST_prod_wrap .list_control_wrap section article .imgBox {
+  width: 100%;
+  height: 490px;
+  background-color: #e4e6e9;
+}
+.BEST_prod_wrap .list_control_wrap section article .imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.BEST_prod_wrap .list_control_wrap section article figcaption {
+  padding: 13px 15px 0;
+}
+.BEST_prod_wrap .list_control_wrap section article figcaption a {
+  font: 14px/1 "Phudu";
+  color: #999;
+}
+.BEST_prod_wrap .list_control_wrap section article figcaption p {
+  font: bold 14px/1 "Phudu";
+  margin-top: 10px;
+}
+.BEST_prod_wrap .list_control_wrap section article .rank {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  clip-path: circle(50% at 50% 50%);
+  background-color: #777;
+  left: 20px;
+  top: 10px;
+  font: lighter 16px/1 "Phudu";
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  opacity: 1;
+  overflow: hidden;
+}
+.BEST_prod_wrap .list_control_wrap section article:hover .rank {
+  opacity: 0;
+  clip-path: circle(0 at 50% 50%);
+  font-size: 1px;
+}
+
+@media screen and (max-width: 1179px) {
+  .BEST_prod_wrap {
+    min-height: 100%;
+    padding: 0px 30px;
+    margin: 0 auto;
+  }
+  .BEST_prod_wrap .filter_wrap {
+    width: 250px;
+    height: 300px;
+    position: absolute;
+    top: 300px;
+    left: 60px;
+  }
+  .BEST_prod_wrap .filter_wrap .close {
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+  }
+  .BEST_prod_wrap .filter_wrap > div {
+    width: 250px;
+    height: 50%;
+    border-bottom: 2px solid #aaa;
+    margin-bottom: 20px;
+  }
+  .BEST_prod_wrap .filter_wrap > div .filter_tit {
+    width: 100%;
+    font: bold 20px/1 "Phudu";
+    letter-spacing: 1.5px;
+    margin-bottom: 30px;
+  }
+  .BEST_prod_wrap .filter_wrap > div .filter_sublist {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .BEST_prod_wrap .filter_wrap > div .filter_sublist label {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  .BEST_prod_wrap .filter_wrap > div .filter_sublist label:hover span {
+    color: #111;
+  }
+  .BEST_prod_wrap .filter_wrap > div .filter_sublist label input {
+    width: 12px;
+    height: 12px;
+  }
+  .BEST_prod_wrap .filter_wrap > div .filter_sublist label span {
+    font: 13px/1 "arial";
+    color: #aaa;
+  }
+}
+@media screen and (max-width: 1179px) and (max-width: 1179px) {
+  .BEST_prod_wrap .filter_wrap {
+    width: 150px;
+    height: 250px;
+    top: 200px;
+    left: 40px;
+  }
+  .BEST_prod_wrap .filter_wrap .close {
+    font-size: 18px;
+  }
+  .BEST_prod_wrap .filter_wrap > div {
+    width: 100%;
+    height: 50%;
+  }
+  .BEST_prod_wrap .filter_wrap > div .filter_tit {
+    font: bold 18px/1 "Phudu";
+    margin-bottom: 15px;
+  }
+  .BEST_prod_wrap .filter_wrap > div .filter_sublist label span {
+    font: 12px/1 "arial";
+  }
+}
+@media screen and (max-width: 1179px) {
+  .BEST_prod_wrap .list_control_wrap {
+    width: calc(100% - 230px);
+    margin-left: 230px;
+  }
+  .BEST_prod_wrap .list_control_wrap h2 {
+    font: bold 28px/80px "Phudu";
+    height: 80px;
+  }
+  .BEST_prod_wrap .list_control_wrap section {
+    width: 100%;
+  }
+  .BEST_prod_wrap .list_control_wrap section article {
+    width: calc(33.3333333333vw - 100px);
+    height: 33.3333333333vw;
+  }
+  .BEST_prod_wrap .list_control_wrap section article .imgBox {
+    height: calc(33.3333333333vw - 100px);
+  }
+  .BEST_prod_wrap .list_control_wrap section article figcaption {
+    padding: 10px 12px 0;
+  }
+  .BEST_prod_wrap .list_control_wrap section article figcaption a {
+    font: 12px/1 "Phudu";
+    color: #999;
+  }
+  .BEST_prod_wrap .list_control_wrap section article figcaption p {
+    font: bold 12px/1 "Phudu";
+    margin-top: 8px;
+  }
+}
+#football {
+  width: 100vw;
+}
+#football #frame {
+  width: 100%;
+  height: 740px;
+  position: relative;
+  margin-bottom: 150px;
+}
+#football #frame .panel {
+  width: 400%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+}
+#football #frame .panel li {
+  width: 100vw;
+  height: 100%;
+}
+#football section {
+  position: relative;
+  width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 200px;
+}
+#football section article {
+  width: 700px;
+  height: 450px;
+  cursor: pointer;
+}
+#football section article img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#football section .ball {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 324px;
+  height: 340px;
+  opacity: 0;
+  transform-origin: center center;
+  transition: 2s;
+  transform: translate(-50%, -50%) rotate(0deg);
+  perspective: 700px;
+}
+#football section .ball img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#football section .ball.on {
+  opacity: 1;
+  transform: translate(-50%, -50%) rotate(1080deg);
+}
+#football .custom_zone {
+  width: 1440px;
+  min-height: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+#football .custom_zone figure {
+  width: 711.18px;
+  height: 669.87px;
+  border: 1px solid #000;
+  overflow: hidden;
+  position: relative;
+}
+#football .custom_zone figure img {
+  display: block;
+  width: 650px;
+  height: 400px;
+  margin: 40px auto 0;
+  object-fit: cover;
+}
+#football .custom_zone figure .con {
+  position: absolute;
+  top: 65%;
+  left: 30px;
+  width: 640px;
+  margin: 40px auto 0;
+}
+#football .custom_zone figure .con h2 {
+  font: bold 40px/1 "Phudu";
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+#football .custom_zone figure .con p {
+  font: bold 18px/1 "Phudu";
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+#football .custom_zone figure .con a {
+  display: block;
+  width: 200px;
+  height: 50px;
+  font: bold 20px/50px "Phudu";
+  text-align: center;
+  background-color: #000;
+  border: 1px solid #000;
+  color: #fff;
+  cursor: pointer;
+}
+#football .custom_zone figure .con a:hover {
+  background-color: #fff;
+  color: #000;
+}
+#football .custom_zone .vidList {
+  width: 711.18px;
+  height: 669.87px;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+}
+#football .custom_zone .vidList .video_frame {
+  width: 400%;
+  height: 100%;
+  position: absolute;
+  left: 0%;
+}
+#football .custom_zone .vidList .video_frame article {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+}
+#football .custom_zone .vidList .video_frame article .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+#football .custom_zone .vidList .video_frame article .pic {
+  display: block;
+  margin: 80px auto 0;
+  width: 650px;
+  height: 350px;
+}
+#football .custom_zone .vidList .video_frame article .pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+#football .custom_zone .vidList .video_frame article .con {
+  width: 640px;
+  margin: 40px auto 0;
+  position: absolute;
+  top: 65%;
+  left: 30px;
+}
+#football .custom_zone .vidList .video_frame article .con h2 {
+  font: bold 40px/1 "Phudu";
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+#football .custom_zone .vidList .video_frame article .con p {
+  font: bold 18px/1 "Phudu";
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+}
+#football .custom_zone .vidList .video_frame article .con a {
+  display: block;
+  width: 200px;
+  height: 50px;
+  font: bold 20px/50px "Phudu";
+  text-align: center;
+  background-color: #000;
+  border: 1px solid #000;
+  color: #fff;
+  cursor: pointer;
+}
+#football .custom_zone .vidList .video_frame article .con a:hover {
+  background-color: #fff;
+  color: #000;
+}
+#football .custom_zone .vidList .pop {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  padding: 5vh 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#football .custom_zone .vidList .pop .btnClose {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  color: #fff;
+  cursor: pointer;
+}
+
+#event {
+  width: 1440px;
+  margin: 20px auto 100px;
+}
+#event h1 {
+  display: block;
+  font: bold 50px/200px "Phudu";
+  width: 100%;
+  height: 200px;
+  text-align: center;
+}
+#event .btns {
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+}
+#event .btns li {
+  width: 360px;
+  height: 50px;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 20px/1 "Phudu";
+  cursor: pointer;
+}
+#event .btns li:hover {
+  background-color: #aaa;
+  color: #000;
+}
+#event .btns li.on {
+  background-color: #000;
+  color: #fff;
+}
+#event section {
+  margin-top: 20px;
+}
+#event section article {
+  width: 100%;
+  height: 700px;
+  padding: 30px;
+  display: none;
+  border: 1px solid #000;
+  position: relative;
+}
+#event section article.on {
+  display: block;
+}
+#event section article .bgImgBox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: #333;
+}
+#event section article .bgImgBox img {
+  opacity: 0.15;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#event section article .ContentsWrap {
+  width: 50%;
+  height: 100%;
+  padding: 50px 30px 50px 0;
+}
+#event section article .ContentsWrap .videoBox {
+  width: 100%;
+  height: 375px;
+}
+#event section article .ContentsWrap .videoBox video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#event section article .ContentsWrap h2 {
+  width: 100%;
+  height: auto;
+  font: bold 50px/1 "Phudu";
+  letter-spacing: 2px;
+  text-align: center;
+  color: #e4e6e9;
+  margin: 60px 0 10px 0;
+}
+#event section article .ContentsWrap p {
+  width: 100%;
+  font: 24px/1 "Phudu";
+  letter-spacing: -2px;
+  text-align: center;
+  color: #e4e6e9;
+}
+
+.sub_content {
+  max-width: 1900px;
+  min-width: 1240px;
+  padding: 100px 50px 150px;
+}
+.sub_content .content_box {
+  width: 100%;
+  height: 100%;
+}
+.sub_content .content_box h2 {
+  width: 100%;
+  font: 32px/48px "맑은 고딕";
+  padding: 50px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: -2px;
+  border-bottom: 1px solid #ddd;
+}
+.sub_content .content_box .wrap {
+  max-width: 420px;
+  margin: 50px auto 0;
+}
+.sub_content .content_box .wrap #loginId,
+.sub_content .content_box .wrap #loginPwd {
+  display: block;
+  width: 100%;
+  height: 50px;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  padding: 0 15px;
+  line-height: 50px;
+  font-size: 14px;
+  color: #000;
+  font-weight: 400;
+  margin-bottom: 10px;
+  outline: none;
+}
+.sub_content .content_box .wrap button {
+  width: 100%;
+  height: 50px;
+  background-color: #000;
+  color: #fff;
+  font: bold 14px/50px "맑은 고딕";
+  font-weight: 400;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.sub_content .content_box .wrap .id_check {
+  padding: 20px 0;
+}
+.sub_content .content_box .wrap .id_check div .form_element {
+  display: flex;
+  vertical-align: middle;
+}
+.sub_content .content_box .wrap .id_check div .form_element #saveId {
+  min-width: 20px;
+  min-height: 20px;
+}
+.sub_content .content_box .wrap .id_check div .form_element .check_s {
+  min-width: 20px;
+  min-height: 20px;
+  padding-left: 10px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.sub_content .content_box .wrap .id_check div::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.sub_content .content_box .wrap .id_check div .form_right {
+  margin-top: -22px;
+  float: right;
+  height: 20px;
+}
+.sub_content .content_box .wrap .id_check div .form_right a {
+  height: 20px;
+  font: 12px/20px "맑은 고딕";
+  color: #aaa;
+  letter-spacing: -1px;
+}
+.sub_content .content_box .wrap .id_check div .form_right a:first-child::after {
+  content: "/";
+  display: inline-block;
+  margin: 0 1px 0 5px;
+}
+.sub_content .content_box .wrap .id_check div .member_sns_login {
+  width: 100%;
+  height: 50px;
+  margin-top: 20px;
+  background-color: #fae100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sub_content .content_box .wrap .id_check div .member_sns_login img {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  margin-right: 5px;
+}
+.sub_content .content_box .wrap .id_check div .member_sns_login a {
+  font: 16px/1 "맑은 고딕";
+}
+.sub_content .content_box .wrap .logIn_footer {
+  width: 100%;
+  height: 60px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sub_content .content_box .wrap .logIn_footer li {
+  width: 49%;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sub_content .content_box .wrap .logIn_footer li:first-child {
+  border-right: 1px solid #ddd;
+}
+.sub_content .content_box .wrap .logIn_footer li a {
+  font: 14px/1 "맑은 고딕";
+}
+
+footer {
+  width: 100vw;
+  height: 450px;
+  background-color: #111;
+  bottom: 0;
+  overflow: hidden;
+}
+footer .inner {
+  width: 1440px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 40px 0px;
+}
+footer .inner .footer_body {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .inner .footer_body .footer_body_ul {
+  width: 1029px;
+  display: flex;
+}
+footer .inner .footer_body .footer_body_ul ul {
+  padding: 0 6px;
+}
+footer .inner .footer_body .footer_body_ul ul:first-child li a {
+  font: 14px/1 "arial";
+  color: #fff;
+}
+footer .inner .footer_body .footer_body_ul ul:nth-of-type(2) li:first-child, footer .inner .footer_body .footer_body_ul ul:nth-of-type(3) li:first-child {
+  height: 24px;
+}
+footer .inner .footer_body .footer_body_ul ul:nth-of-type(2) li:first-child a, footer .inner .footer_body .footer_body_ul ul:nth-of-type(3) li:first-child a {
+  font: 14px/1 "arial";
+  color: #fff;
+}
+footer .inner .footer_body .footer_body_ul ul li {
+  margin-bottom: 3px;
+  width: 245.25px;
+  height: 25px;
+}
+footer .inner .footer_body .footer_body_ul ul li a {
+  color: #aaa;
+  font: bold 12px/1 "arial";
+}
+footer .inner .footer_body .footer_body_ul ul li a:hover {
+  color: #fff;
+}
+footer .inner .footer_body .footer_body_social ul {
+  display: flex;
+}
+footer .inner .footer_body .footer_body_social ul li {
+  margin-left: 20px;
+  width: 30px;
+  height: 30px;
+  background-color: #aaa;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+footer .inner .footer_body .footer_body_social ul li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .inner .footer_body .footer_body_social ul li a i {
+  font-size: 18px;
+  color: #222;
+}
+footer .inner .footer_body .footer_body_social ul li:hover {
+  background-color: #fff;
+}
+footer .inner .footer_body .footer_body_social ul li:hover a i {
+  color: #000;
+}
+footer .inner .footer_bottom {
+  width: 1440px;
+  height: 40%;
+  bottom: 0;
+}
+footer .inner .footer_bottom .part1 {
+  width: 1440px;
+  height: 20%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .inner .footer_bottom .part1 .part1_left {
+  display: flex;
+}
+footer .inner .footer_bottom .part1 .part1_left i {
+  font-size: 14px;
+  color: #fff;
+}
+footer .inner .footer_bottom .part1 .part1_left span {
+  color: #fff;
+  font-size: 10px/1 "맑은 고딕";
+  letter-spacing: -1px;
+  margin: 0 8px;
+}
+footer .inner .footer_bottom .part1 .part1_left p {
+  color: #aaa;
+  font-size: 10px/1 "arial";
+  letter-spacing: -0.5px;
+  margin: 0 8px;
+}
+footer .inner .footer_bottom .part1 .part1_right {
+  display: flex;
+}
+footer .inner .footer_bottom .part1 .part1_right li {
+  margin-left: 20px;
+}
+footer .inner .footer_bottom .part1 .part1_right li a {
+  font: bold 12px/1 "맑은 고딕";
+  color: #aaa;
+  letter-spacing: -1px;
+}
+footer .inner .footer_bottom .part1 .part1_right li:nth-of-type(2) a {
+  color: #fff;
+}
+footer .inner .footer_bottom .part2 {
+  width: 100%;
+  height: 70%;
+  border-top: 2px solid #aaa;
+  padding-top: 20px;
+}
+footer .inner .footer_bottom .part2::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+footer .inner .footer_bottom .part2 a, footer .inner .footer_bottom .part2 span {
+  font: 12px/1.4 "맑은 고딕";
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+footer .inner .footer_bottom .part2 p {
+  font: 12px/1.4 "맑은 고딕";
+  letter-spacing: -1px;
+  color: #aaa;
+  padding: 0 10px 0 10px;
+  height: 50%;
+}
+footer .inner .footer_bottom .part2 .legal_section {
+  width: 50%;
+  height: 100%;
+  float: left;
+  position: relative;
+}
+footer .inner .footer_bottom .part2 .legal_section p:first-child a {
+  position: absolute;
+  top: 30%;
+  right: 15px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  color: #aaa;
+  padding: 0 3px;
+  cursor: pointer;
+}
+footer .inner .footer_bottom .part2 .legal_section p:first-child a:hover {
+  background-color: #fff;
+  color: #111;
+}
+footer .inner .footer_bottom .part2 .legal_section p:last-child {
+  padding: 30px 10px 0 10px;
+}
+footer .inner .footer_bottom .part2 .payment_information {
+  width: 50%;
+  float: left;
+}
+footer .inner .footer_bottom .part2 .payment_information::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+footer .inner .footer_bottom .part2 .payment_information a {
+  float: right;
+  margin: 5px 0 0 10px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  color: #aaa;
+  padding: 0 3px;
+  cursor: pointer;
+}
+footer .inner .footer_bottom .part2 .payment_information a:hover {
+  background-color: #fff;
+  color: #111;
+}
+footer .inner .footer_bottom .part2 .legal_moreView {
+  width: 50%;
+  padding-top: 30px;
+  float: left;
+}
+footer .inner .footer_bottom .part2 .legal_moreView p {
+  font: 12px/1.4 "맑은 고딕";
+}
+footer .inner .footer_bottom .part2 .legal_moreView p a {
+  margin-left: 10px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  color: #aaa;
+  padding: 0 3px;
+  cursor: pointer;
+}
+footer .inner .footer_bottom .part2 .legal_moreView p a:hover {
+  background-color: #fff;
+  color: #111;
+}
+
+@media screen and (max-width: 1179px) {
+  footer {
+    height: 350px;
+  }
+  footer .inner {
+    width: 899px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 25px 0px;
+  }
+  footer .inner .footer_body .footer_body_ul {
+    width: 650px;
+  }
+  footer .inner .footer_body .footer_body_ul ul {
+    padding: 0 4px;
+  }
+  footer .inner .footer_body .footer_body_ul ul:first-child li a {
+    font: 13px/1 "Phudu";
+  }
+  footer .inner .footer_body .footer_body_ul ul:nth-of-type(2) li:first-child, footer .inner .footer_body .footer_body_ul ul:nth-of-type(3) li:first-child {
+    height: 18px;
+  }
+  footer .inner .footer_body .footer_body_ul ul:nth-of-type(2) li:first-child a, footer .inner .footer_body .footer_body_ul ul:nth-of-type(3) li:first-child a {
+    font: 13px/1 "Phudu";
+    color: #fff;
+  }
+  footer .inner .footer_body .footer_body_ul ul li {
+    margin-bottom: 5px;
+    width: 200px;
+    height: 18px;
+  }
+  footer .inner .footer_body .footer_body_ul ul li a {
+    font: bold 12px/1 "Phudu";
+  }
+  footer .inner .footer_bottom {
+    width: 899px;
+    height: 40%;
+    bottom: 0px;
+  }
+  footer .inner .footer_bottom .part1 {
+    width: 100%;
+  }
+  footer .inner .footer_bottom .part1 .part1_left i {
+    font-size: 12px;
+  }
+  footer .inner .footer_bottom .part1 .part1_left span {
+    font-size: 9px/1 "맑은 고딕";
+  }
+  footer .inner .footer_bottom .part1 .part1_left p {
+    font-size: 9px/1 "arial";
+    margin: 0 6px;
+  }
+  footer .inner .footer_bottom .part1 .part1_right li {
+    margin-left: 15px;
+  }
+  footer .inner .footer_bottom .part1 .part1_right li a {
+    font: bold 11px/1 "맑은 고딕";
+  }
+  footer .inner .footer_bottom .part2 {
+    padding-top: 10px;
+  }
+  footer .inner .footer_bottom .part2 a, footer .inner .footer_bottom .part2 span {
+    font: 11px/1.2 "맑은 고딕";
+  }
+  footer .inner .footer_bottom .part2 p {
+    font: 11px/1.3 "맑은 고딕";
+    padding: 0 8px 0 8px;
+  }
+  footer .inner .footer_bottom .part2 .legal_section p:first-child a {
+    top: 45%;
+    right: 12px;
+    border-radius: 7px;
+    padding: 0 4px;
+  }
+  footer .inner .footer_bottom .part2 .legal_section p:first-child a:hover {
+    background-color: #fff;
+    color: #111;
+  }
+  footer .inner .footer_bottom .part2 .payment_information a {
+    margin: 2px 0 0 0px;
+    border-radius: 10px;
+    color: #aaa;
+    padding: 0 3px;
+    cursor: pointer;
+  }
+  footer .inner .footer_bottom .part2 .payment_information a:hover {
+    background-color: #fff;
+    color: #111;
+  }
+  footer .inner .footer_bottom .part2 .legal_moreView {
+    width: 50%;
+    padding-top: 30px;
+    float: left;
+  }
+  footer .inner .footer_bottom .part2 .legal_moreView p {
+    font: 12px/1.4 "맑은 고딕";
+  }
+  footer .inner .footer_bottom .part2 .legal_moreView p a {
+    margin-left: 10px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    color: #aaa;
+    padding: 0 3px;
+    cursor: pointer;
+  }
+  footer .inner .footer_bottom .part2 .legal_moreView p a:hover {
+    background-color: #fff;
+    color: #111;
+  }
+}
+@media screen and (max-width: 767px) {
+  footer {
+    height: 150px;
+    background-color: #eee;
+    position: relative;
+  }
+  footer .inner {
+    width: 90vw;
+    padding: 20px 20px;
+  }
+  footer .inner .footer_body .footer_body_ul {
+    display: none;
+  }
+  footer .inner .footer_body .footer_body_social {
+    position: absolute;
+    right: 50px;
+  }
+  footer .inner .footer_bottom {
+    width: 90vw;
+    position: absolute;
+    top: 70px;
+  }
+  footer .inner .footer_bottom .part1 {
+    width: 100%;
+    margin: 0 auto;
+    height: 20%;
+    display: block;
+  }
+  footer .inner .footer_bottom .part1 .part1_left {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+  }
+  footer .inner .footer_bottom .part1 .part1_left i {
+    font-size: 18px;
+    color: #333;
+  }
+  footer .inner .footer_bottom .part1 .part1_left span {
+    color: #333;
+    font: 18px/1 "맑은 고딕";
+    letter-spacing: -1px;
+    margin: 0 0 0 10px;
+  }
+  footer .inner .footer_bottom .part1 .part1_left p {
+    color: #555;
+    font: 18px/1 "arial";
+    letter-spacing: -0.5px;
+    margin: 0 8px;
+  }
+  footer .inner .footer_bottom .part1 .part1_right {
+    display: flex;
+    margin-top: 5px;
+  }
+  footer .inner .footer_bottom .part1 .part1_right li {
+    margin-left: 0px;
+    margin-right: 20px;
+  }
+  footer .inner .footer_bottom .part1 .part1_right li a {
+    font: bold 14px/1 "맑은 고딕";
+    color: #555;
+    letter-spacing: -1px;
+  }
+  footer .inner .footer_bottom .part1 .part1_right li:nth-of-type(2) a {
+    color: #333;
+  }
+  footer .inner .footer_bottom .part2 {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,94 @@
+#event{
+   width: 1440px;
+   margin: 20px auto 100px;
+   h1{
+      display: block;
+      font: bold 50px/200px "Phudu";
+      width: 100%;
+      height: 200px;
+      text-align: center;
+   }
+   .btns{
+      display: flex;
+      flex-wrap: wrap;
+      height: auto;
+      li{
+         width: calc(1440px / 4);
+         height: 50px;
+         border: 1px solid #000;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         font: 20px/1 "Phudu";
+         cursor: pointer;
+         &:hover{
+            background-color: #aaa;
+            color: #000;
+         }
+         &.on{
+            background-color: #000;
+            color: #fff;
+         }
+      }
+   }
+   section{
+      margin-top: 20px;
+      article{
+         width: 100%;
+         height: 700px;
+         padding: 30px;
+         display: none;
+         border : 1px solid #000;
+         position: relative;
+         &.on{
+            display: block;
+         }
+         .bgImgBox{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            background-color: #333;
+            img{
+               opacity: 0.15;
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+            }
+         }
+         .ContentsWrap{
+            width: 50%;
+            height: 100%;
+            padding: 50px 30px 50px 0;
+            .videoBox{
+               width: 100%;
+               height: 375px;
+               video{
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+               }
+            }
+            h2{
+               width: 100%;
+               height: auto;
+               font: bold 50px/1 "Phudu";
+               letter-spacing: 2px;
+               text-align: center;
+               color: #e4e6e9;
+               margin : 60px 0 10px 0;
+            }
+            p{
+               width: 100%;
+               font: 24px/1 "Phudu";
+               letter-spacing: -2px;
+               text-align: center;
+               color: #e4e6e9;
+            }
+         }
+         
+      }
+   }
+}

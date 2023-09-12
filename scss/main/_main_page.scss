@@ -1,0 +1,632 @@
+#frame{
+    position: relative;
+    width: 100%;
+    height: calc(100vw / (16 / 9));
+    overflow: hidden;
+    margin-bottom: 50px;
+    .panel{
+        height: 100%;
+        position: absolute;
+        display: flex;
+        left: -100vw;
+        cursor: pointer;
+        li{
+            width: 100vw;
+            height: 100%;
+           img{
+            width: 100%;
+            height: 100%;
+           } 
+        }
+    }
+    
+}
+
+#banner{
+    width: 1440px;
+    margin: 0 auto;
+    cursor: pointer;
+    .imgBox{
+        width: 100%;
+        height: 118.62px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .item_wrap{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .videoBox{
+            width: 927.97px;
+            height: 572.2px;
+            video{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .imgBox{
+            width: 572.2px;
+            height: 572.2px;
+            overflow: hidden;
+            position: relative;
+            .banner_slide{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                transition: 0.5s;
+                li{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                    img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    }
+                }
+            }
+            
+            .btns{
+                position: absolute;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                gap: 10px;
+                li{
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    background-color: #fff;
+                    border: 0.5px solid #999;
+                    &.on{
+                        background-color: #000;
+                        border: none;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+#recommend{
+    width: 1440px;
+    height: 465.5px;
+    margin: 100px auto;
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 12px;
+        left: 0;
+        width: 1440px;
+        height: 2px;
+        background-color: #000;
+        z-index: -1;
+    }
+
+    h1{
+        width: 600px;
+        background-color: #fff;
+        margin: 0 auto 100px;
+        display: block;
+        font: bold 30px/1 "Phudu";
+        letter-spacing: 1px;
+        text-align: center;
+    }
+    .items_wrap{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 100px;
+        overflow: hidden;
+        li{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            &:nth-of-type(1){
+                position: absolute;
+                left: -110vw;
+            }
+            &:nth-of-type(2){
+                position: absolute;
+                left: 0vw;
+            }
+            &:nth-of-type(3){
+                position: absolute;
+                left: 110vw;
+            }
+            article{
+                height: 350px;
+                cursor: pointer;
+                img{
+                    width: 270px;
+                    height: 270px;
+                    object-fit: cover;
+                }
+                &:hover{
+                    .txt{
+                        p{
+                            opacity: 1; 
+                            transform: translateY(0px);
+                        }
+                    }
+                }
+                .txt{
+                    width: 260px;
+                    height: calc(350px - 270px);
+                    padding: 0 5px;
+                    
+                    p{
+                        width: 100%;
+                        opacity: 0;
+                        transform: translateY(-25px);
+                        transition: 0.5s;
+                        &.brand{
+                            font: 12px/1 "Phudu";
+                            color: #999;
+                            margin-top: 20px;
+                        }
+                        &.prod_title{
+                            font: 14px/1 "Phudu";
+                            color: #999;
+                            margin-top: 10px;
+                        }
+                        &.prod_price{
+                            font: bold 14px/1 "Phudu";
+                            color: #000;
+                            margin-top: 5px;
+                        }
+                    }
+                }
+                    
+            }
+        }
+    }
+    .prev{
+        position: absolute;
+        top: 200px;
+        i{
+            font-size: 50px;
+        }
+        width: 31.25px;
+        height: 50px;
+        left: -50px;
+    }
+    .next{
+        position: absolute;
+        top: 200px;
+        i{
+            font-size: 50px;
+        }
+        width: 31.25px;
+        height: 50px;
+        right: -50px;
+    }
+}
+
+#full_banner{
+    width: 100%;
+    overflow: hidden;
+    section{
+        width: 1440px;
+        height: 900px;
+        margin: 0 auto;
+        position: relative;
+        transition: 0.5s;
+        overflow: hidden;
+        .imgBox{
+            width: 100%;
+            height: 600px;
+            margin-bottom: 40px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                cursor: pointer;
+            }
+        }
+        .txtBox{
+            margin: 0 auto;
+            h1{
+                font: bold 40px/1 "Phudu";
+                text-align: center;
+                letter-spacing: 1px;
+                margin-bottom: 20px;
+            }
+            h2{
+                font: 20px/1 "Phudu";
+                text-align: center;
+                letter-spacing: -2px;
+                color: #222;
+                margin-bottom: 30px;
+            }
+        }
+        a{
+            margin: 0 auto;
+            width: 180px;
+            height: 50px;
+            padding: 0 9px;
+            background-color: #fff;
+            border: 1px solid #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font: 16px/1 "맑은 고딕";
+            letter-spacing: -1px;
+            color: #000;
+            &:hover{
+                background-color: #000;
+                border: 1px solid #fff;
+                color: #fff;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1179px){
+    #frame{
+        margin-bottom: 10px;
+        .panel{
+            height: 100%;
+            position: absolute;
+            display: flex;
+            left: -100vw;
+            cursor: pointer;
+            li{
+                width: 100vw;
+                height: 100%;
+               img{
+                width: 100%;
+                height: 100%;
+               } 
+            }
+        }
+        
+    }
+    
+    #banner{
+        width: 100%;
+        .imgBox{
+            height: 10vw;
+        }
+        .item_wrap{
+            .videoBox{
+                width: 60%;
+                height: 42vw;
+            }
+            .imgBox{
+                width: 40%;
+                height: 42vw;
+                
+                .btns{
+                    li{
+                        display: none;
+                    }
+                }
+            }
+            
+        }
+    }
+    
+    #recommend{
+        width: 90%;
+        height: 30vw;
+        margin: 50px auto;
+        &::before{
+            width: 100%;
+        }
+        h1{
+            width: 50%;
+            margin: 0 auto 20px;
+            font: bold 24px/1 "Phudu";
+        }
+        .items_wrap{
+            top: 70px;
+            li{
+                &:nth-of-type(1){
+                    left: -110%;
+                }
+                &:nth-of-type(2){
+                    left: 0%;
+                }
+                &:nth-of-type(3){
+                    left: -110%;
+                }
+                article{
+                    width: 17vw;
+                    height: 17vw;
+                    &:hover{
+                        .txt{
+                            p{
+                                transform: translateY(-15px);
+                            }
+                        }
+                    }
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                    .txt{
+                        width: 100%;
+                        padding: 0 2px;
+                        
+                        p{
+                            opacity: 1;
+                            transform: translateY(-15px);
+                            &.brand{
+                                font: 10px/1 "Phudu";
+                                margin-top: 20px;
+                            }
+                            &.prod_title{
+                                font: 12px/1 "Phudu";
+                                margin-top: 7px;
+                            }
+                            &.prod_price{
+                                font: bold 12px/1 "Phudu";
+                                margin-top: 2px;
+                            }
+                        }
+                    }
+                        
+                }
+            }
+        }
+        .prev{
+            top: 150px;
+            i{
+                font-size: 30px;
+            }
+            left: -40px;
+        }
+        .next{
+            top: 150px;
+            i{
+                font-size: 30px;
+            }
+            right: -40px;
+        }
+    }
+    
+    #full_banner{
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        section{
+            width: 100vw;
+            height: calc(100vw / (16 / 9));
+            .imgBox{
+                margin-bottom: 20px;
+            }
+            .txtBox{
+                h1{
+                    font: bold 35px/1 "Phudu";
+                    letter-spacing: 1px;
+                    margin-bottom: 15px;
+                }
+                h2{
+                    font: 15px/1 "Phudu";
+                    letter-spacing: -2px;
+                    margin-bottom: 15px;
+                }
+            }
+            .btnBox{
+                width: 150px;
+                height: 40px;
+                a{
+                    font: 14px/1 "맑은 고딕";
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 767px) {
+    
+    body{-ms-overflow-style:none; }
+    body::-webkit-scrollbar { display:none; }
+
+    #banner{
+        width: 100%;
+        background-color: #eee;
+        padding: 20px 0;
+        .imgBox{
+            height: 9vw;
+        }
+        .item_wrap{
+            width: 100%;
+            display: block;
+            .videoBox{
+                width: 90vw;
+                height: 60vw;
+                margin: 20px auto;
+            }
+            .imgBox{
+                width: 90vw;
+                height: 20vw;
+                margin: 0 auto;
+                overflow: visible;
+                position: static;
+                .banner_slide{
+                    position: static;
+                    display: flex;
+                    justify-content: space-between;
+                    li{
+                    position: static;
+                    width: 24%;
+                    }
+                }
+                .btns{
+                    display: none;
+                }
+            }
+            
+        }
+    }
+    
+    #recommend{
+        width: 90vw;
+        height: 42vw;
+        margin: 80px auto 30px;
+        position: relative;
+        overflow: hidden;
+        &::before{
+            width: 90vw;
+        }
+        h1{
+            width: fit-content;
+            padding: 0 30px;
+            margin: 0 auto 50px;
+            font: bold 24px/1 "Phudu";
+        }
+        .items_wrap{
+            width: calc(25% * 15);
+            position: static;
+            top: 50px;
+            overflow: hidden; //
+            &::after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+            li{
+                width: calc(90vw / 4);
+                padding: 10px;
+                display: block;
+                float: left;
+                img{
+                    width: 100%;
+                    height: 90%;
+                    object-fit: cover;
+                }
+                .txt{
+                    width: 100%;
+                    height: 10%;
+                    padding: 0 5px;
+                    
+                    p{
+                        width: 100%;
+                        opacity: 1;
+                        transform: translateY(0px);
+                        &.brand{
+                            font: 12px/1 "Phudu";
+                            color: #999;
+                            margin-top: 6px;
+                        }
+                        &.prod_title{
+                            font: 14px/1 "Phudu";
+                            color: #999;
+                            margin-top: 4px;
+                        }
+                        &.prod_price{
+                            font: bold 14px/1 "Phudu";
+                            color: #000;
+                            margin-top: 2px;
+                        }
+                    }
+                }
+                &:nth-of-type(1){
+                    position: static;
+                    left: unset;
+                }
+                &:nth-of-type(2){
+                    position: static;
+                    left: unset;
+                }
+                &:nth-of-type(3){
+                    position: static;
+                    left: unset;
+                }
+            }
+        }
+        .prev{
+            position: absolute;
+            top: 48%;
+            i{
+                font-size: 30px;
+                color: rgba($color: #000000, $alpha: 0.7);
+            }
+            width: 18.75px;
+            height: 30px;
+            left: -20px;
+        }
+        .next{
+            position: absolute;
+            top: 48%;
+            i{
+                font-size: 30px;
+                color: rgba($color: #000000, $alpha: 0.7);
+            }
+            width: 18.75px;
+            height: 30px;
+            right: -20px;
+        }
+    }
+    
+    #full_banner{
+        width: 100%;
+        overflow: hidden;
+        section{
+            width: 1440px;
+            height: 900px;
+            margin: 0 auto;
+            position: relative;
+            transition: 0.5s;
+            overflow: hidden;
+            .imgBox{
+                width: 100%;
+                height: 600px;
+                margin-bottom: 40px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    cursor: pointer;
+                }
+            }
+            .txtBox{
+                margin: 0 auto;
+                h1{
+                    font: bold 40px/1 "Phudu";
+                    text-align: center;
+                    letter-spacing: 1px;
+                    margin-bottom: 20px;
+                }
+                h2{
+                    font: 20px/1 "Phudu";
+                    text-align: center;
+                    letter-spacing: -2px;
+                    color: #222;
+                    margin-bottom: 30px;
+                }
+            }
+            a{
+                margin: 0 auto;
+                width: 180px;
+                height: 50px;
+                padding: 0 9px;
+                background-color: #fff;
+                border: 1px solid #000;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                font: 16px/1 "맑은 고딕";
+                letter-spacing: -1px;
+                color: #000;
+                &:hover{
+                    background-color: #000;
+                    border: 1px solid #fff;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
