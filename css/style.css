@@ -735,35 +735,65 @@ aside .inner .util li i {
   }
   #full_banner {
     width: 100%;
-    height: auto;
     overflow: hidden;
   }
   #full_banner section {
-    width: 100vw;
-    height: 56.25vw;
+    width: 90vw;
+    height: calc(50.625vw + 150px);
+    margin: 0 auto;
+    position: relative;
+    transition: 0.5s;
+    overflow: hidden;
   }
   #full_banner section .imgBox {
-    margin-bottom: 20px;
+    width: 100%;
+    height: calc(50.625vw - 100px);
+    margin-bottom: 40px;
+  }
+  #full_banner section .imgBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+  }
+  #full_banner section .txtBox {
+    margin: 0 auto;
   }
   #full_banner section .txtBox h1 {
-    font: bold 35px/1 "Phudu";
+    font: bold 40px/1 "Phudu";
+    text-align: center;
     letter-spacing: 1px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
   #full_banner section .txtBox h2 {
-    font: 15px/1 "Phudu";
+    font: 20px/1 "Phudu";
+    text-align: center;
     letter-spacing: -2px;
-    margin-bottom: 15px;
+    color: #222;
+    margin-bottom: 30px;
   }
-  #full_banner section .btnBox {
-    width: 150px;
-    height: 40px;
+  #full_banner section a {
+    margin: 0 auto;
+    width: 180px;
+    height: 50px;
+    padding: 0 9px;
+    background-color: #fff;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font: 16px/1 "맑은 고딕";
+    letter-spacing: -1px;
+    color: #000;
   }
-  #full_banner section .btnBox a {
-    font: 14px/1 "맑은 고딕";
+  #full_banner section a:hover {
+    background-color: #000;
+    border: 1px solid #fff;
+    color: #fff;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 450px) {
   body {
     -ms-overflow-style: none;
   }
@@ -773,7 +803,7 @@ aside .inner .util li i {
   #banner {
     width: 100%;
     background-color: #eee;
-    padding: 20px 0;
+    padding: 10px 0;
   }
   #banner .imgBox {
     height: 9vw;
@@ -904,63 +934,51 @@ aside .inner .util li i {
     color: rgba(0, 0, 0, 0.7);
   }
   #full_banner {
-    width: 100%;
+    width: 90vw;
     overflow: hidden;
+    margin: 30px auto;
+    position: relative;
+  }
+  #full_banner > h1 {
+    display: block;
+    width: fit-content;
+    background-color: #fff;
+    font: bold 30px/1 "Phudu";
+    text-align: center;
+    margin: 20px auto 60px;
+    padding: 0 20px;
+  }
+  #full_banner > h1::before {
+    content: "";
+    display: block;
+    width: 90vw;
+    height: 2px;
+    position: absolute;
+    top: 36px;
+    z-index: -1;
+    left: 0;
+    background-color: #000;
   }
   #full_banner section {
-    width: 1440px;
-    height: 900px;
-    margin: 0 auto;
-    position: relative;
-    transition: 0.5s;
-    overflow: hidden;
+    padding: 0 10px;
+    width: 45vw;
+    height: 27vw;
+    margin: 0 0 30px 0;
+    float: left;
   }
   #full_banner section .imgBox {
-    width: 100%;
-    height: 600px;
-    margin-bottom: 40px;
-  }
-  #full_banner section .imgBox img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    cursor: pointer;
-  }
-  #full_banner section .txtBox {
-    margin: 0 auto;
+    height: 19vw;
+    margin-bottom: 15px;
   }
   #full_banner section .txtBox h1 {
-    font: bold 40px/1 "Phudu";
-    text-align: center;
-    letter-spacing: 1px;
-    margin-bottom: 20px;
+    font: bold 18px/1 "Phudu";
+    margin-bottom: 8px;
   }
   #full_banner section .txtBox h2 {
-    font: 20px/1 "Phudu";
-    text-align: center;
-    letter-spacing: -2px;
-    color: #222;
-    margin-bottom: 30px;
+    font: 14px/1 "Phudu";
   }
   #full_banner section a {
-    margin: 0 auto;
-    width: 180px;
-    height: 50px;
-    padding: 0 9px;
-    background-color: #fff;
-    border: 1px solid #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    font: 16px/1 "맑은 고딕";
-    letter-spacing: -1px;
-    color: #000;
-  }
-  #full_banner section a:hover {
-    background-color: #000;
-    border: 1px solid #fff;
-    color: #fff;
+    display: none;
   }
 }
 .NEW_prod_wrap {
@@ -1317,13 +1335,13 @@ aside .inner .util li i {
 }
 .BEST_prod_wrap .list_control_wrap section article .rank {
   position: absolute;
-  width: 40px;
-  height: 40px;
+  width: 3vw;
+  height: 3vw;
   clip-path: circle(50% at 50% 50%);
   background-color: #777;
   left: 20px;
   top: 10px;
-  font: lighter 16px/1 "Phudu";
+  font: lighter 1vw/1 "Phudu";
   color: #fff;
   display: flex;
   justify-content: center;
