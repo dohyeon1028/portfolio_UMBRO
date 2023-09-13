@@ -1,6 +1,5 @@
 const articles = document.querySelectorAll("section article");
 const articles_len = articles.length;
-console.log(articles_len)
 
 articles.forEach((el, index) => {
    el.innerHTML += `<div class= "rank">${index+1}</div>`
@@ -18,14 +17,12 @@ if(window.innerWidth > 1179){
    setTimeout(() => {
       for(let i = 0; i < 4 ; i++){
          articles[i].style.top = "0px";
-         console.log(parseInt(articles[1].style.top));
          articles[i].style.opacity = "1";
          articles[i].style.transitionDelay = `${i * 0.1}s`
       }
    }, 0);
    window.addEventListener("scroll", ()=>{
       const scroll = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
-      console.log(scroll);
       if(scroll >= 300 && scroll < 900){
          for(let i = 4; i < 8 ; i++){
             articles[i].style.top = "0px";

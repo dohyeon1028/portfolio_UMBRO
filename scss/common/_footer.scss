@@ -370,20 +370,23 @@ footer{
         position: relative;
         .inner{
             width: 90vw;
-            padding: 20px 20px;
+            padding: 20px 5px;
             .footer_body{
+                height: 20%;
                 .footer_body_ul{
                     display: none;
+                    
                 }
                 .footer_body_social{
                     position: absolute;
-                    right: 50px;
+                    top: 5vw;
+                    right: 10vw;
                 }
             }
             .footer_bottom{
                 width: 90vw;
                 position: absolute;
-                top: 70px;
+                bottom: 1vw;
                 .part1{
                     width: 100%;
                     margin: 0 auto;
@@ -393,35 +396,32 @@ footer{
                     .part1_left{
                         display: flex;
                         width: 100%;
-                        position: absolute;
-                        bottom: 0px;
                         i{
-                            font-size: 18px;
+                            font-size: 4vw;
                             color: #333;
                         }
                         span{
                             color: #333;
-                            font: 18px/1 "맑은 고딕";
+                            font: 4vw/1 "맑은 고딕";
                             letter-spacing: -1px;
-                            margin: 0 0 0 10px;
+                            margin: 0 0 0 5px;
                         }
                         p{
                             color: #555;
-                            font: 18px/1 "arial";
+                            font: 4vw/1 "arial";
                             letter-spacing: -0.5px;
                             margin: 0 8px;
                         }
                     }
                     .part1_right{
                         display: flex;
-                        margin-top: 5px;
                         li{
                             margin-left: 0px;
-                            margin-right: 20px;
+                            margin-right: 10px;
                             a{
-                                font: bold 14px/1 "맑은 고딕";
+                                font: bold 2vw/1 "맑은 고딕";
                                 color: #555;
-                                letter-spacing: -1px;
+                                letter-spacing: -2px;
                             }
                             &:nth-of-type(2){
                                 a{

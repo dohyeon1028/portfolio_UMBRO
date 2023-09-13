@@ -25,11 +25,9 @@ const bars = header.querySelector(".fa-bars");
 const mobile_aside = document.querySelector(".mobile_aside");
 const mobile_aside_closeBtn = mobile_aside.querySelector(".close");
 const body = document.querySelector("body")
-bars.addEventListener("click", ()=>{
-    mobile_aside.style.right = "0%";
-    body.style.overflowY = "hidden";
+bars.addEventListener("click", ()=>{   
+    mobile_aside.classList.add("on");
 })
 mobile_aside_closeBtn.addEventListener("click", ()=>{
-    mobile_aside.style.right = "-200%";
-    body.style.overflowY = "scroll";
+    mobile_aside.classList.remove("on");
 })

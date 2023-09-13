@@ -4,12 +4,11 @@ const panel = frame.querySelector(".panel");
 const panel_lis = panel.querySelectorAll("li");
 const interval = 3000;
 let len = panel_lis.length;
-// console.log(len)
-
 init();
+
 setInterval(() => {
     nextSlide();
-    youtube_slide();
+    // youtube_slide();
 }, interval);
 
 
@@ -51,7 +50,6 @@ window.addEventListener("scroll", ()=>{
     const scroll = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
     const ball =  document.querySelector(".wrap .ball");
     const ball_img = document.querySelector("img");
-    console.log(scroll);
     if(scroll > 400){
         ball.classList.add("on");
     }else{

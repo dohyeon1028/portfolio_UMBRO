@@ -129,7 +129,7 @@ header .bars .fa-bars {
   font-size: 20px;
   position: absolute;
   top: 50%;
-  right: 40px;
+  right: 20px;
   transform: translateY(-50%);
 }
 
@@ -139,29 +139,36 @@ aside {
   position: absolute;
   z-index: 5;
   top: 0;
-  right: -120%;
+  right: -200%;
   background-color: rgba(0, 0, 0, 0.3);
-  display: flex;
+  display: none;
   flex-direction: row-reverse;
+  transition: 1s;
+  opacity: 0;
+}
+aside.on {
+  right: 0%;
+  display: flex;
+  opacity: 1;
 }
 aside .inner {
-  width: 80%;
+  width: 90%;
   height: 100%;
   background-color: #ddd;
   position: relative;
 }
 aside .inner .close {
-  width: 20px;
-  height: 20px;
+  width: 10%;
+  height: 10vw;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 30px;
-  right: 30px;
+  top: 0;
+  left: -10%;
 }
 aside .inner .close .fa-x {
-  font-size: 20px;
+  font-size: 5vw;
 }
 aside .inner #gnb {
   width: 80%;
@@ -182,15 +189,24 @@ aside .inner #gnb li a {
   font: bold 18px/1 "Phudu";
 }
 aside .inner .util {
+  width: 100%;
+  height: 75px;
   position: absolute;
-  top: 30px;
-  left: 40px;
+  top: 0px;
+  left: 0px;
+  background-color: #333;
   display: flex;
+  align-items: center;
   gap: 20px;
+  padding-left: 40px;
+}
+aside .inner .util li {
+  color: #eee;
 }
 aside .inner .util li a {
   font: 16px/1 "Phudu";
   letter-spacing: -1px;
+  color: #eee;
 }
 aside .inner .util li i {
   display: none;
@@ -241,7 +257,7 @@ aside .inner .util li i {
     font: 10px/1 "arial";
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 450px) {
   .headerBox {
     height: 0px;
   }
@@ -250,18 +266,19 @@ aside .inner .util li i {
   }
   header {
     width: 100vw;
-    height: 75px;
+    height: 40px;
     position: relative;
   }
   header h1 {
     width: 200px;
-    height: 75%;
+    height: 80%;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
   }
   header h1 img {
+    position: absolute;
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -274,94 +291,7 @@ aside .inner .util li i {
     display: none;
   }
   header .bars {
-    width: 100%;
-    height: 100%;
-    position: relative;
     display: block;
-  }
-  header .bars .fa-bars {
-    width: 20px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    right: 40px;
-    transform: translateY(-50%);
-    cursor: pointer;
-  }
-  aside {
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    z-index: 5;
-    top: 0;
-    right: -200%;
-    display: flex;
-    flex-direction: row-reverse;
-    transition: 1s;
-  }
-  aside .inner {
-    width: 90%;
-    height: 100%;
-    background-color: #eee;
-    position: relative;
-  }
-  aside .inner .close {
-    width: 10%;
-    height: 10vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: -10%;
-  }
-  aside .inner .close .fa-x {
-    font-size: 5vw;
-  }
-  aside .inner #gnb {
-    width: 80%;
-    padding: 10px 0;
-    position: absolute;
-    top: 100px;
-    left: 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
-  aside .inner #gnb li {
-    display: block;
-    width: 100%;
-    border-bottom: 1px solid #aaa;
-  }
-  aside .inner #gnb li a {
-    font: bold 18px/1 "Phudu";
-  }
-  aside .inner .util {
-    width: 100%;
-    height: 75px;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    background-color: #333;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding-left: 40px;
-  }
-  aside .inner .util li {
-    color: #eee;
-  }
-  aside .inner .util li a {
-    font: 16px/1 "Phudu";
-    letter-spacing: -1px;
-    color: #eee;
-  }
-  aside .inner .util li i {
-    display: none;
   }
 }
 #frame {
@@ -592,7 +522,7 @@ aside .inner .util li i {
 #full_banner section .txtBox {
   margin: 0 auto;
 }
-#full_banner section .txtBox h1 {
+#full_banner section .txtBox > h1 {
   font: bold 40px/1 "Phudu";
   text-align: center;
   letter-spacing: 1px;
@@ -626,7 +556,7 @@ aside .inner .util li i {
   color: #fff;
 }
 
-@media screen and (max-width: 1179px) {
+@media (min-width: 450px) and (max-width: 1179px) {
   #frame {
     margin-bottom: 10px;
   }
@@ -838,19 +768,20 @@ aside .inner .util li i {
   }
   #recommend {
     width: 90vw;
-    height: 42vw;
+    height: 48vw;
     margin: 80px auto 30px;
     position: relative;
     overflow: hidden;
   }
   #recommend::before {
     width: 90vw;
+    top: 5px;
   }
   #recommend h1 {
     width: fit-content;
-    padding: 0 30px;
-    margin: 0 auto 50px;
-    font: bold 24px/1 "Phudu";
+    padding: 0 10px;
+    margin: 0 auto 10px;
+    font: bold 3.5vw/1 "Phudu";
   }
   #recommend .items_wrap {
     width: 375%;
@@ -865,7 +796,7 @@ aside .inner .util li i {
   }
   #recommend .items_wrap li {
     width: 22.5vw;
-    padding: 10px;
+    padding: 5px;
     display: block;
     float: left;
   }
@@ -885,19 +816,21 @@ aside .inner .util li i {
     transform: translateY(0px);
   }
   #recommend .items_wrap li .txt p.brand {
-    font: 12px/1 "Phudu";
+    font: 9px/1 "Phudu";
     color: #999;
-    margin-top: 6px;
+    margin-top: 5px;
   }
   #recommend .items_wrap li .txt p.prod_title {
-    font: 14px/1 "Phudu";
+    font: 5px/1 "Phudu";
     color: #999;
     margin-top: 4px;
   }
   #recommend .items_wrap li .txt p.prod_price {
-    font: bold 14px/1 "Phudu";
+    font: bold 7px/1 "Phudu";
     color: #000;
     margin-top: 2px;
+    position: absolute;
+    bottom: 2px;
   }
   #recommend .items_wrap li:nth-of-type(1) {
     position: static;
@@ -962,20 +895,22 @@ aside .inner .util li i {
   #full_banner section {
     padding: 0 10px;
     width: 45vw;
-    height: 27vw;
+    height: 37vw;
     margin: 0 0 30px 0;
     float: left;
   }
   #full_banner section .imgBox {
     height: 19vw;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
   #full_banner section .txtBox h1 {
-    font: bold 18px/1 "Phudu";
+    font: bold 3vw/1 "Phudu";
     margin-bottom: 8px;
+    padding: 0 1vw;
   }
   #full_banner section .txtBox h2 {
-    font: 14px/1 "Phudu";
+    font: 2vw/1 "Phudu";
+    letter-spacing: -1px;
   }
   #full_banner section a {
     display: none;
@@ -1335,13 +1270,13 @@ aside .inner .util li i {
 }
 .BEST_prod_wrap .list_control_wrap section article .rank {
   position: absolute;
-  width: 3vw;
-  height: 3vw;
+  width: 2vw;
+  height: 2vw;
   clip-path: circle(50% at 50% 50%);
   background-color: #777;
   left: 20px;
   top: 10px;
-  font: lighter 1vw/1 "Phudu";
+  font: lighter 0.8vw/1 "Phudu";
   color: #fff;
   display: flex;
   justify-content: center;
@@ -2214,19 +2149,23 @@ footer .inner .footer_bottom .part2 .legal_moreView p a:hover {
   }
   footer .inner {
     width: 90vw;
-    padding: 20px 20px;
+    padding: 20px 5px;
+  }
+  footer .inner .footer_body {
+    height: 20%;
   }
   footer .inner .footer_body .footer_body_ul {
     display: none;
   }
   footer .inner .footer_body .footer_body_social {
     position: absolute;
-    right: 50px;
+    top: 5vw;
+    right: 10vw;
   }
   footer .inner .footer_bottom {
     width: 90vw;
     position: absolute;
-    top: 70px;
+    bottom: 1vw;
   }
   footer .inner .footer_bottom .part1 {
     width: 100%;
@@ -2237,37 +2176,34 @@ footer .inner .footer_bottom .part2 .legal_moreView p a:hover {
   footer .inner .footer_bottom .part1 .part1_left {
     display: flex;
     width: 100%;
-    position: absolute;
-    bottom: 0px;
   }
   footer .inner .footer_bottom .part1 .part1_left i {
-    font-size: 18px;
+    font-size: 4vw;
     color: #333;
   }
   footer .inner .footer_bottom .part1 .part1_left span {
     color: #333;
-    font: 18px/1 "맑은 고딕";
+    font: 4vw/1 "맑은 고딕";
     letter-spacing: -1px;
-    margin: 0 0 0 10px;
+    margin: 0 0 0 5px;
   }
   footer .inner .footer_bottom .part1 .part1_left p {
     color: #555;
-    font: 18px/1 "arial";
+    font: 4vw/1 "arial";
     letter-spacing: -0.5px;
     margin: 0 8px;
   }
   footer .inner .footer_bottom .part1 .part1_right {
     display: flex;
-    margin-top: 5px;
   }
   footer .inner .footer_bottom .part1 .part1_right li {
     margin-left: 0px;
-    margin-right: 20px;
+    margin-right: 10px;
   }
   footer .inner .footer_bottom .part1 .part1_right li a {
-    font: bold 14px/1 "맑은 고딕";
+    font: bold 2vw/1 "맑은 고딕";
     color: #555;
-    letter-spacing: -1px;
+    letter-spacing: -2px;
   }
   footer .inner .footer_bottom .part1 .part1_right li:nth-of-type(2) a {
     color: #333;

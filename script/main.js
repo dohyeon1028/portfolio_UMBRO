@@ -4,7 +4,6 @@ const panel = frame.querySelector(".panel");
 const panel_lis = panel.querySelectorAll("li");
 const interval = 3000;
 let len = panel_lis.length;
-// console.log(len)
 
 if(window.innerWidth > 767){
     init();
@@ -90,11 +89,9 @@ if(window.innerWidth > 767){
     for(let el of sections){
         section_Y.push(el.offsetTop);
     }
-    // console.log(section_Y);
 
     window.addEventListener("scroll", ()=>{
         const scroll = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
-        // console.log(scroll);
         
         for(let i = 0; i < 4; i++){
             if(scroll >= section_Y[i]){
@@ -104,31 +101,47 @@ if(window.innerWidth > 767){
         }
 
     })
-}else if(window.innerWidth <= 767){
+}
+
+var mobileWidth = window.matchMedia("screen and (max-width: 768px)");
+
+if(mobileWidth.matches){
     
     //frame
+    let startPoint = 0;
+    let endPoint = 0;
+    let totalPoint = null;
+
+    panel.style.left = totalPoint;
+    
     panel.addEventListener("touchstart", (e)=>{
-        let startPoint = e.touches[0].pageX;
+        startPoint = e.touches[0].pageX;
     })
     panel.addEventListener("touchend", (e)=>{
-        let endPoint = e.changedTouches[0].pageX;
-
+        endPoint = e.changedTouches[0].pageX;
+        
         if (startPoint < endPoint) {
             // 오른쪽으로 스와이프 된 경우
-            console.log("prev move");
             prevMove();
-          } else if (startPoint > endPoint) {
+            console.log("left");
+        } else if (startPoint > endPoint) {
             // 왼쪽으로 스와이프 된 경우
-            console.log("next move");
+            console.log("right");
             nextMove();
-          }
+            
+            
+        }
+        startPoint = 0;
+        endPoint = 0;
+        totalPoint = endPoint - startPoint;
     })
 
-    function nextSlide(){
-
+    function prevMove(){
+        panel.prepend(panel.lastElementChild);
     }
-    function prevSlide(){
-
+    function nextMove(){
+        panel.append(panel.firstElementChild);
+        
     }
     //frame
 
@@ -148,7 +161,35 @@ if(window.innerWidth > 767){
         `
     });
     items_wrap.innerHTML = article;
-    console.log(article)
+    
+    items_wrap.addEventListener("touchstart", (e)=>{
+        startPoint = e.touches[0].pageX;
+    })
+    items_wrap.addEventListener("touchend", (e)=>{
+        endPoint = e.changedTouches[0].pageX;
+        
+        if (startPoint < endPoint) {
+            // 오른쪽으로 스와이프 된 경우
+            prevMove();
+            console.log("left");
+        } else if (startPoint > endPoint) {
+            // 왼쪽으로 스와이프 된 경우
+            console.log("right");
+            nextMove();
+            
+            
+        }
+        startPoint = 0;
+        endPoint = 0;
+        totalPoint = endPoint - startPoint;
+    })
+
+    function prevMove(){
+        items_wrap.prepend(items_wrap.lastElementChild);
+    }
+    function nextMove(){
+        items_wrap.append(items_wrap.firstElementChild);
+    }
     //recommend
 
     //fullbanner
@@ -156,7 +197,6 @@ if(window.innerWidth > 767){
     let eventTitle = `<h1>EVENT</h1>`;
     
     let event = document.createElement("h1");
-    console.log(event);
     event.innerText = "event"
     full_banner.prepend(event);
 }
