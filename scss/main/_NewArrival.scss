@@ -47,6 +47,7 @@
             }
             figcaption{
                padding: 13px 15px 0;
+               position: relative;
                a{
                   font: 14px/1 "Phudu";
                   color: #999;
@@ -132,8 +133,8 @@
                figcaption{
                   padding: 0.5vh 0.5vw 0;
                   height: 8vh;
-                  position: relative;
                   a{
+                     height: 8vw;
                      position: absolute;
                      top: 1vh;
                      font-size: 0.6em;
@@ -142,7 +143,7 @@
                   p{
                      font: bold 1.2vw/1 "Phudu";
                      position: absolute;
-                     bottom: 0;
+                     bottom: 3vw;
                   }
                }
             }

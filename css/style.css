@@ -43,7 +43,7 @@ header {
   overflow: hidden;
 }
 header h1 {
-  width: 200px;
+  width: 15vw;
   height: 75%;
   position: absolute;
   left: 10%;
@@ -65,14 +65,14 @@ header #gnb {
   transform: translate(-50%, -50%);
 }
 header #gnb li {
-  width: 200px;
+  width: 10vw;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 header #gnb li a {
-  font: bold 20px/1 "Phudu";
+  font: bold 2vw/1 "Phudu";
   letter-spacing: 1px;
   position: relative;
 }
@@ -93,7 +93,7 @@ header #gnb li a:hover::after {
   background-color: #333;
 }
 header .util {
-  width: 250px;
+  width: 20vw;
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -109,7 +109,7 @@ header .util li {
   align-items: center;
 }
 header .util li a {
-  font: 12px/1 "arial";
+  font: 1vw/1 "arial";
 }
 header .util li a:first-child {
   font-weight: bold;
@@ -212,51 +212,6 @@ aside .inner .util li i {
   display: none;
 }
 
-@media screen and (max-width: 1179px) {
-  .headerBox {
-    width: 100%;
-    height: 150px;
-  }
-  .headerBox.on {
-    height: 75px;
-  }
-  header {
-    width: 100vw;
-    height: 150px;
-    display: flex;
-    justify-content: space-evenly;
-    position: absolute;
-  }
-  header h1 {
-    width: 150px;
-    left: 8%;
-  }
-  header #gnb {
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    top: 50%;
-    left: 45%;
-    transform: translate(-50%, -50%);
-  }
-  header #gnb li {
-    width: 130px;
-  }
-  header #gnb li a {
-    font: bold 18px/1 "Phudu";
-    letter-spacing: 0px;
-  }
-  header #gnb li a::after {
-    bottom: -10px;
-  }
-  header .util {
-    width: 220px;
-    left: 85%;
-  }
-  header .util li a {
-    font: 10px/1 "arial";
-  }
-}
 @media screen and (max-width: 450px) {
   .headerBox {
     height: 0px;
@@ -266,7 +221,7 @@ aside .inner .util li i {
   }
   header {
     width: 100vw;
-    height: 40px;
+    height: 70px;
     position: relative;
   }
   header h1 {
@@ -334,11 +289,10 @@ aside .inner .util li i {
 #banner .item_wrap {
   width: 100%;
   display: flex;
-  justify-content: space-between;
 }
 #banner .item_wrap .videoBox {
-  width: 927.97px;
-  height: 572.2px;
+  width: 888px;
+  height: 547px;
 }
 #banner .item_wrap .videoBox video {
   width: 100%;
@@ -346,8 +300,8 @@ aside .inner .util li i {
   object-fit: cover;
 }
 #banner .item_wrap .imgBox {
-  width: 572.2px;
-  height: 572.2px;
+  width: 552px;
+  height: 547px;
   overflow: hidden;
   position: relative;
 }
@@ -742,7 +696,6 @@ aside .inner .util li i {
     height: 9vw;
   }
   #banner .item_wrap {
-    width: 100%;
     display: block;
   }
   #banner .item_wrap .videoBox {
@@ -833,7 +786,7 @@ aside .inner .util li i {
     color: #000;
     margin-top: 2px;
     position: absolute;
-    bottom: 2px;
+    bottom: 2vh;
   }
   #recommend .items_wrap li:nth-of-type(1) {
     position: static;
@@ -848,7 +801,6 @@ aside .inner .util li i {
     left: unset;
   }
   #recommend .prev {
-    position: absolute;
     top: 48%;
     width: 18.75px;
     height: 30px;
@@ -859,7 +811,6 @@ aside .inner .util li i {
     color: rgba(0, 0, 0, 0.7);
   }
   #recommend .next {
-    position: absolute;
     top: 48%;
     width: 18.75px;
     height: 30px;
@@ -871,7 +822,6 @@ aside .inner .util li i {
   }
   #full_banner {
     width: 90vw;
-    overflow: hidden;
     margin: 30px auto;
     position: relative;
   }
@@ -1041,6 +991,7 @@ aside .inner .util li i {
 }
 .NEW_prod_wrap .list_control_wrap section article figcaption {
   padding: 13px 15px 0;
+  position: relative;
 }
 .NEW_prod_wrap .list_control_wrap section article figcaption a {
   font: 14px/1 "Phudu";
@@ -1194,9 +1145,9 @@ aside .inner .util li i {
   .NEW_prod_wrap .list_control_wrap section article figcaption {
     padding: 0.5vh 0.5vw 0;
     height: 8vh;
-    position: relative;
   }
   .NEW_prod_wrap .list_control_wrap section article figcaption a {
+    height: 8vw;
     position: absolute;
     top: 1vh;
     font-size: 0.6em;
@@ -1205,7 +1156,7 @@ aside .inner .util li i {
   .NEW_prod_wrap .list_control_wrap section article figcaption p {
     font: bold 1.2vw/1 "Phudu";
     position: absolute;
-    bottom: 0;
+    bottom: 3vw;
   }
 }
 .BEST_prod_wrap {
@@ -1471,7 +1422,7 @@ aside .inner .util li i {
 }
 #football #frame {
   width: 100%;
-  height: 740px;
+  height: 38.5vw;
   position: relative;
   margin-bottom: 150px;
 }
