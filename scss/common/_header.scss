@@ -131,21 +131,21 @@ aside{
         opacity: 1;
     }
     .inner{
-        width: 90%;
+        width: 85%;
         height: 100%;
         background-color: #ddd;
         position: relative;
         .close{
-            width: 10%;
-            height: 10vw;
+            width: 15%;
+            height: 15vw;
             display: flex;
             justify-content: center;
             align-items: center;
             position: absolute;
-            top: 0;
-            left: -10%;
+            top: 10px;
+            left: -16%;
             .fa-x{
-                font-size: 5vw;
+                font-size: 10vw;
             }
         }
         #gnb{

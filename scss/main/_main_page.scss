@@ -460,7 +460,10 @@
     
     body{-ms-overflow-style:none; }
     body::-webkit-scrollbar { display:none; }
-
+    
+    #frame{
+        margin-bottom: 2vh;
+    }
     #banner{
         width: 100%;
         background-color: #eee;
@@ -642,7 +645,7 @@
                     padding: 0 1vw;
                 }
                 h2{
-                    font: 2vw/1 "Phudu";
+                    font: 2vw/1.2 "Phudu";
                     letter-spacing: -1px;
                 }
             }

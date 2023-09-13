@@ -110,9 +110,6 @@ if(mobileWidth.matches){
     //frame
     let startPoint = 0;
     let endPoint = 0;
-    let totalPoint = null;
-
-    panel.style.left = totalPoint;
     
     panel.addEventListener("touchstart", (e)=>{
         startPoint = e.touches[0].pageX;
@@ -122,24 +119,23 @@ if(mobileWidth.matches){
         
         if (startPoint < endPoint) {
             // 오른쪽으로 스와이프 된 경우
-            prevMove();
+            frame_prevMove();
             console.log("left");
         } else if (startPoint > endPoint) {
             // 왼쪽으로 스와이프 된 경우
             console.log("right");
-            nextMove();
+            frame_nextMove();
             
             
         }
         startPoint = 0;
         endPoint = 0;
-        totalPoint = endPoint - startPoint;
     })
 
-    function prevMove(){
+    function frame_prevMove(){
         panel.prepend(panel.lastElementChild);
     }
-    function nextMove(){
+    function frame_nextMove(){
         panel.append(panel.firstElementChild);
         
     }
@@ -170,24 +166,23 @@ if(mobileWidth.matches){
         
         if (startPoint < endPoint) {
             // 오른쪽으로 스와이프 된 경우
-            prevMove();
+            recommend_prevMove();
             console.log("left");
         } else if (startPoint > endPoint) {
             // 왼쪽으로 스와이프 된 경우
             console.log("right");
-            nextMove();
+            recommend_nextMove();
             
             
         }
         startPoint = 0;
         endPoint = 0;
-        totalPoint = endPoint - startPoint;
     })
 
-    function prevMove(){
+    function recommend_prevMove(){
         items_wrap.prepend(items_wrap.lastElementChild);
     }
-    function nextMove(){
+    function recommend_nextMove(){
         items_wrap.append(items_wrap.firstElementChild);
     }
     //recommend

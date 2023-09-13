@@ -152,23 +152,23 @@ aside.on {
   opacity: 1;
 }
 aside .inner {
-  width: 90%;
+  width: 85%;
   height: 100%;
   background-color: #ddd;
   position: relative;
 }
 aside .inner .close {
-  width: 10%;
-  height: 10vw;
+  width: 15%;
+  height: 15vw;
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  top: 0;
-  left: -10%;
+  top: 10px;
+  left: -16%;
 }
 aside .inner .close .fa-x {
-  font-size: 5vw;
+  font-size: 10vw;
 }
 aside .inner #gnb {
   width: 80%;
@@ -730,6 +730,9 @@ aside .inner .util li i {
   body::-webkit-scrollbar {
     display: none;
   }
+  #frame {
+    margin-bottom: 2vh;
+  }
   #banner {
     width: 100%;
     background-color: #eee;
@@ -909,7 +912,7 @@ aside .inner .util li i {
     padding: 0 1vw;
   }
   #full_banner section .txtBox h2 {
-    font: 2vw/1 "Phudu";
+    font: 2vw/1.2 "Phudu";
     letter-spacing: -1px;
   }
   #full_banner section a {
@@ -987,6 +990,11 @@ aside .inner .util li i {
   }
   .NEW_prod_wrap .filter_wrap > div .filter_sublist label span {
     font: 12px/1 "arial";
+  }
+}
+@media screen and (max-width: 450px) {
+  .NEW_prod_wrap .filter_wrap {
+    display: none;
   }
 }
 .NEW_prod_wrap .list_control_wrap {
@@ -1115,6 +1123,11 @@ aside .inner .util li i {
     font: 12px/1 "arial";
   }
 }
+@media screen and (max-width: 1179px) and (max-width: 450px) {
+  .NEW_prod_wrap .filter_wrap {
+    display: none;
+  }
+}
 @media screen and (max-width: 1179px) {
   .NEW_prod_wrap .list_control_wrap {
     width: calc(100% - 230px);
@@ -1144,6 +1157,55 @@ aside .inner .util li i {
   .NEW_prod_wrap .list_control_wrap section article figcaption p {
     font: bold 12px/1 "Phudu";
     margin-top: 8px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .NEW_prod_wrap {
+    width: 100vw;
+    padding-bottom: 100px;
+    padding: 2vw 3vh;
+  }
+  .NEW_prod_wrap .list_control_wrap {
+    width: 100%;
+    margin-left: 0px;
+  }
+  .NEW_prod_wrap .list_control_wrap h2 {
+    font: bold 5vw/10vh "Phudu";
+    text-align: center;
+    height: 10vh;
+  }
+  .NEW_prod_wrap .list_control_wrap section {
+    width: 100%;
+  }
+  .NEW_prod_wrap .list_control_wrap section article {
+    width: calc(33.3333333333% - 10px);
+    height: calc(33.3333333333vw + 10vh);
+  }
+  .NEW_prod_wrap .list_control_wrap section article .imgBox {
+    width: 100%;
+    height: calc(33.3333333333vw - 10px);
+  }
+  .NEW_prod_wrap .list_control_wrap section article .imgBox img.before {
+    opacity: 1;
+  }
+  .NEW_prod_wrap .list_control_wrap section article .imgBox img.after {
+    opacity: 0;
+  }
+  .NEW_prod_wrap .list_control_wrap section article figcaption {
+    padding: 0.5vh 0.5vw 0;
+    height: 8vh;
+    position: relative;
+  }
+  .NEW_prod_wrap .list_control_wrap section article figcaption a {
+    position: absolute;
+    top: 1vh;
+    font-size: 0.6em;
+    color: #999;
+  }
+  .NEW_prod_wrap .list_control_wrap section article figcaption p {
+    font: bold 1.2vw/1 "Phudu";
+    position: absolute;
+    bottom: 0;
   }
 }
 .BEST_prod_wrap {
@@ -1217,6 +1279,11 @@ aside .inner .util li i {
   }
   .BEST_prod_wrap .filter_wrap > div .filter_sublist label span {
     font: 12px/1 "arial";
+  }
+}
+@media screen and (max-width: 450px) {
+  .BEST_prod_wrap .filter_wrap {
+    display: none;
   }
 }
 .BEST_prod_wrap .list_control_wrap {
@@ -1361,6 +1428,11 @@ aside .inner .util li i {
   }
   .BEST_prod_wrap .filter_wrap > div .filter_sublist label span {
     font: 12px/1 "arial";
+  }
+}
+@media screen and (max-width: 1179px) and (max-width: 450px) {
+  .BEST_prod_wrap .filter_wrap {
+    display: none;
   }
 }
 @media screen and (max-width: 1179px) {
@@ -1821,6 +1893,25 @@ aside .inner .util li i {
   font: 14px/1 "맑은 고딕";
 }
 
+@media screen and (max-width: 450px) {
+  .sub_content {
+    max-width: 90vw;
+    min-width: 60vw;
+    padding: 5vh 5vw 8vh;
+    margin: 0 auto;
+  }
+  .sub_content .content_box {
+    width: 100%;
+    height: 100%;
+  }
+  .sub_content .content_box h2 {
+    font: 8vw/48px "맑은 고딕";
+    padding: 3vh;
+  }
+  .sub_content .content_box .wrap {
+    margin: 5vh auto 0;
+  }
+}
 footer {
   width: 100vw;
   height: 450px;
