@@ -1,62 +1,66 @@
 //자동 슬라이드
-const frame = document.querySelector("#frame");
-const panel = frame.querySelector(".panel");
-const panel_lis = panel.querySelectorAll("li");
-const interval = 3000;
-let len = panel_lis.length;
-init();
 
-setInterval(() => {
-    nextSlide();
-    // youtube_slide();
-}, interval);
+if(window.innerWidth > 450){
+    const frame = document.querySelector("#frame");
+    const panel = frame.querySelector(".panel");
+    const panel_lis = panel.querySelectorAll("li");
+    const interval = 3000;
+    let len = panel_lis.length;
+    init();
+
+    setInterval(() => {
+        nextSlide();
+        // youtube_slide();
+    }, interval);
 
 
-function nextSlide(){
+    function nextSlide(){
 
-    const duration = 500;
-    const initialValue = parseInt(panel.style.left);
+        const duration = 500;
+        const initialValue = parseInt(panel.style.left);
 
-    const targetValue = -200;
-    const unit = "%";
+        const targetValue = -200;
+        const unit = "%";
 
-    const startTime = performance.now();
+        const startTime = performance.now();
 
-    function animate(time){
-        const timeReal = time - startTime;
-        const progress = timeReal / duration;
-        const currentValue = initialValue + (targetValue - initialValue) * progress;
-        panel.style.left = `${currentValue}${unit}`;
+        function animate(time){
+            const timeReal = time - startTime;
+            const progress = timeReal / duration;
+            const currentValue = initialValue + (targetValue - initialValue) * progress;
+            panel.style.left = `${currentValue}${unit}`;
 
-        if(progress < 1){
-            requestAnimationFrame(animate);
-        }else if(progress >= 1){
-            panel.style.left = "-100%";
-            panel.append(panel.firstElementChild);
+            if(progress < 1){
+                requestAnimationFrame(animate);
+            }else if(progress >= 1){
+                panel.style.left = "-100%";
+                panel.append(panel.firstElementChild);
+            }
+
         }
-
+        requestAnimationFrame(animate);
     }
-    requestAnimationFrame(animate);
+
+    function init(){
+        panel.style.left = "-100%";
+        panel.prepend(panel.lastElementChild);    
+    }
+
+    //ball rotate
+
+    window.addEventListener("scroll", ()=>{
+        const scroll = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+        const ball =  document.querySelector(".wrap .ball");
+        const ball_img = document.querySelector("img");
+        if(scroll > 400){
+            ball.classList.add("on");
+        }else{
+            ball.classList.remove("on");
+        }
+        
+    })
 }
 
-function init(){
-    panel.style.left = "-100%";
-    panel.prepend(panel.lastElementChild);    
-}
-
-//ball rotate
-
-window.addEventListener("scroll", ()=>{
-    const scroll = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
-    const ball =  document.querySelector(".wrap .ball");
-    const ball_img = document.querySelector("img");
-    if(scroll > 400){
-        ball.classList.add("on");
-    }else{
-        ball.classList.remove("on");
-    }
-    
-})
 
 //youtube
 
@@ -91,7 +95,7 @@ fetch(url)
 
             result += `
                 <article style="left: ${25 * (index - 1)}%;">
-                    <img src="../img/football/youtube/pc_ucustom_contents_zone.png" class="bg" alt="">
+                    <img src="../img/football/youtube/pc_ucustom_contents_zone.png" class="bg" alt="컨텐츠란 배경사진">
                     <a href="${el.snippet.resourceId.videoId}" class="pic">
                         <img src="${el.snippet.thumbnails.medium.url}">
                     </a>

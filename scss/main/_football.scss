@@ -19,15 +19,15 @@
     }
     section{
         position: relative;
-        width: 1440px;
+        width: 80vw;
         margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
-        gap: 40px;
-        margin-bottom: 200px;
+        gap: 2vw;
+        margin-bottom: 10vw;
         article{
-            width: 700px;
-            height: 450px;
+            width: 39vw;
+            height: 25vw;
             cursor: pointer;
             img{
                 width: 100%;
@@ -39,13 +39,12 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            width: 324px;
-            height: 340px;
+            width: 20vw;
+            height: 20vw;
             opacity: 0;
             transform-origin: center center;
             transition: 2s;
             transform: translate(-50%, -50%) rotate(0deg);
-            perspective: 700px;
             img{
                 width: 100%;
                 height: 100%;
@@ -59,52 +58,49 @@
         }
     }
     .custom_zone{
-        width: 1440px;
-        min-height: 900px;
+        width: 80vw;
+        min-height: 50vw;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
 
         figure{
-            width: 711.18px;
-            height: 669.87px;;
+            width: 39.5vw; //711.18px;
+            height: 37.20558086560366vw; //669.87px;
             border: 1px solid #000;
             overflow: hidden;
             position: relative;
             img {
                 display: block;
-                width: 650px;
-                height: 400px;
-                margin: 40px auto 0;
+                width: 36.5vw; //650px
+                height: 22.4vw;
+                margin: 2vw auto 0;
                 object-fit: cover;
             }
     
             .con{
-                position: absolute;
-                top: 65%;
-                left: 30px;
-                width: 640px;
-                margin: 40px auto 0;
-    
+                
+                width: 90%;
+                margin: 1vw auto 0;
                 h2{
-                    font: bold 40px/1 "Phudu";
+                    font: bold 3vw/1 "Phudu";
                     letter-spacing: 1px;
-                    margin-bottom: 15px;
+                    margin-bottom: 0.5vw;
                     width: 100%;
                     // text-overflow: ellipsis;
                 }
     
                 p{
-                    font: bold 18px/1 "Phudu";
+                    font: bold 1.5vw/1 "Phudu";
                     letter-spacing: 1px;
-                    margin-bottom: 30px;
+                    margin-bottom: 1vw;
                 }
     
                 a{
                     display: block;
-                    width: 200px;
-                    height: 50px;
-                    font: bold 20px/50px "Phudu";
+                    width: 20vw;
+                    height: 3vw;
+                    font: bold 1.5vw/3vw "Phudu";
                     text-align: center;
                     background-color: #000;
                     border: 1px solid #000;
@@ -120,8 +116,8 @@
         }
 
         .vidList {
-            width: 711.18px;
-            height: 669.87px;
+            width: 39.5vw; //711.18px;
+            height: 37.20558086560366vw; //669.87px;
             flex-wrap: wrap;
             position: relative;
             overflow: hidden;
@@ -148,9 +144,9 @@
                     
                     .pic{
                         display: block;
-                        margin: 80px auto 0;
-                        width: 650px;
-                        height: 350px;
+                        margin: 4vw auto 0;
+                        width: 36.5vw; //650px
+                        height: 22.4vw;
                         img {
                             width: 100%;
                             height: 100%;
@@ -160,31 +156,28 @@
                     }
             
                     .con{
-                        width: 640px;
-                        margin: 40px auto 0;
-                        position: absolute;
-                        top: 65%;
-                        left: 30px;
-            
+                        width: 100%;
+                        margin: 1vw auto 0;
+                        padding: 0 20px;
                         h2{
-                            font: bold 40px/1 "Phudu";
+                            font: bold 3vw/1 "Phudu";
                             letter-spacing: 1px;
-                            margin-bottom: 15px;
+                            margin-bottom: 0.5vw;
                             width: 100%;
                             // text-overflow: ellipsis;
                         }
             
                         p{
-                            font: bold 18px/1 "Phudu";
+                            font: bold 1.5vw/1 "Phudu";
                             letter-spacing: 1px;
-                            margin-bottom: 30px;
+                            margin-bottom: 1vw;
                         }
             
                         a{
                             display: block;
-                            width: 200px;
-                            height: 50px;
-                            font: bold 20px/50px "Phudu";
+                            width: 20vw;
+                            height: 3vw;
+                            font: bold 1.5vw/3vw "Phudu";
                             text-align: center;
                             background-color: #000;
                             border: 1px solid #000;
@@ -221,3 +214,4 @@
         }
     }
 }
+

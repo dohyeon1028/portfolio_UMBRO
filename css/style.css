@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Phudu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -109,7 +110,8 @@ header .util li {
   align-items: center;
 }
 header .util li a {
-  font: 0.8vw/1 "arial";
+  transform: scale(0.9);
+  font: 0.8vw/1 "Nanum Gothic";
 }
 header .util li a:first-child {
   font-weight: bold;
@@ -583,7 +585,7 @@ aside .inner .util li i {
   }
   #recommend .items_wrap li {
     width: 22.5vw;
-    padding: 5px;
+    padding: 5vh 5px;
     display: block;
     float: left;
   }
@@ -594,8 +596,9 @@ aside .inner .util li i {
   }
   #recommend .items_wrap li .txt {
     width: 100%;
-    height: 10%;
-    padding: 0 5px;
+    height: 13vh;
+    padding: 0 0px;
+    position: relative;
   }
   #recommend .items_wrap li .txt p {
     width: 100%;
@@ -609,17 +612,18 @@ aside .inner .util li i {
   }
   #recommend .items_wrap li .txt p.prod_title {
     width: 125%;
-    font: 1vw/1 "Phudu";
+    font: 1vw/1 "Nanum Gothic";
     color: #999;
     margin-top: 1vw;
     transform-origin: top left;
     transform: scale(0.8);
   }
   #recommend .items_wrap li .txt p.prod_price {
-    font: bold 7px/1 "Phudu";
+    font: bold 1.2vw/1 "Phudu";
     color: #000;
     position: absolute;
     bottom: 0;
+    text-align: right;
   }
   #recommend .items_wrap li:nth-of-type(1) {
     position: static;
@@ -655,7 +659,7 @@ aside .inner .util li i {
   }
   #full_banner {
     width: 90vw;
-    margin: 30px auto;
+    margin: 2vh auto;
     position: relative;
   }
   #full_banner > h1 {
@@ -775,7 +779,7 @@ aside .inner .util li i {
   flex-wrap: wrap;
 }
 .NEW_prod_wrap .list_control_wrap section article {
-  width: 22vw;
+  width: 21vw;
   height: 38.4vw;
 }
 .NEW_prod_wrap .list_control_wrap section article .imgBox {
@@ -813,25 +817,24 @@ aside .inner .util li i {
 
 @media screen and (max-width: 450px) {
   .NEW_prod_wrap {
-    width: 100vw;
     padding-bottom: 100px;
     padding: 2vw 3vh;
   }
   .NEW_prod_wrap .list_control_wrap {
     width: 100%;
-    margin-left: 0px;
   }
   .NEW_prod_wrap .list_control_wrap h2 {
     font: bold 5vw/10vh "Phudu";
     text-align: center;
     height: 10vh;
+    margin-bottom: 3vh;
   }
   .NEW_prod_wrap .list_control_wrap section {
     width: 100%;
   }
   .NEW_prod_wrap .list_control_wrap section article {
     width: calc(33.3333333333% - 10px);
-    height: calc(33.3333333333vw + 10vh);
+    height: calc(33.3333333333vw + 15vh);
   }
   .NEW_prod_wrap .list_control_wrap section article .imgBox {
     width: 100%;
@@ -845,7 +848,8 @@ aside .inner .util li i {
   }
   .NEW_prod_wrap .list_control_wrap section article figcaption {
     padding: 0.5vh 0.5vw 0;
-    height: 8vh;
+    height: 12vh;
+    position: relative;
   }
   .NEW_prod_wrap .list_control_wrap section article figcaption a {
     height: 8vw;
@@ -857,7 +861,8 @@ aside .inner .util li i {
   .NEW_prod_wrap .list_control_wrap section article figcaption p {
     font: bold 1.2vw/1 "Phudu";
     position: absolute;
-    bottom: 3vw;
+    bottom: 0vw;
+    right: 0;
   }
 }
 .BEST_prod_wrap {
@@ -987,79 +992,55 @@ aside .inner .util li i {
 
 @media screen and (max-width: 450px) {
   .BEST_prod_wrap {
-    padding: 2vh 2vw;
+    padding: 5vh 2vw 20vh;
     display: block;
   }
   .BEST_prod_wrap .list_control_wrap {
-    width: 88vw;
+    width: 100%;
   }
   .BEST_prod_wrap .list_control_wrap h2 {
-    font: bold 2vw/1 "Phudu";
-    display: flex;
-    align-items: center;
-    height: 7vh;
-    letter-spacing: 1px;
+    font: bold 4vw/1 "Phudu";
+    margin-bottom: 5vh;
+    justify-content: center;
   }
   .BEST_prod_wrap .list_control_wrap h2 span {
-    font: bold 2vw/100px "Phudu";
-    color: #aaa;
-    margin-left: 10px;
+    font: bold 3vw/100px "Phudu";
   }
   .BEST_prod_wrap .list_control_wrap section {
-    width: 100%;
-    display: flex;
-    gap: 0.5vw;
-    flex-wrap: wrap;
+    justify-content: space-between;
   }
   .BEST_prod_wrap .list_control_wrap section article {
-    width: 21vw;
-    height: 38.4vw;
-    transform: translateY(0);
-    opacity: 0;
-    transition-duration: 0.5s;
+    height: 40vw;
   }
   .BEST_prod_wrap .list_control_wrap section article .imgBox {
-    width: 100%;
-    height: 28.5vw;
-    background-color: #e4e6e9;
-  }
-  .BEST_prod_wrap .list_control_wrap section article .imgBox img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+    height: 29vw;
   }
   .BEST_prod_wrap .list_control_wrap section article figcaption {
-    padding: 13px 15px 0;
+    width: 125%;
+    height: 10vw;
+    padding: 0;
+    position: relative;
+    margin-top: 1vw;
+    transform-origin: top left;
+    transform: scale(0.8);
   }
   .BEST_prod_wrap .list_control_wrap section article figcaption a {
-    font: 14px/1 "Phudu";
-    color: #999;
+    position: absolute;
+    top: 0;
+    font: 10px/1 "Phudu";
   }
   .BEST_prod_wrap .list_control_wrap section article figcaption p {
-    font: bold 14px/1 "Phudu";
-    margin-top: 10px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font: bold 11px/1 "Phudu";
+    margin-top: 0px;
   }
   .BEST_prod_wrap .list_control_wrap section article .rank {
-    position: absolute;
-    width: 2vw;
-    height: 2vw;
-    clip-path: circle(50% at 50% 50%);
-    background-color: #777;
-    left: 20px;
-    top: 10px;
-    font: lighter 0.8vw/1 "Phudu";
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.3s;
-    opacity: 1;
-    overflow: hidden;
-  }
-  .BEST_prod_wrap .list_control_wrap section article:hover .rank {
-    opacity: 0;
-    clip-path: circle(0 at 50% 50%);
-    font-size: 1px;
+    width: 4vw;
+    height: 4vw;
+    left: 1vw;
+    top: 1vw;
   }
 }
 #football {
@@ -1083,16 +1064,16 @@ aside .inner .util li i {
 }
 #football section {
   position: relative;
-  width: 1440px;
+  width: 80vw;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
-  margin-bottom: 200px;
+  gap: 2vw;
+  margin-bottom: 10vw;
 }
 #football section article {
-  width: 700px;
-  height: 450px;
+  width: 39vw;
+  height: 25vw;
   cursor: pointer;
 }
 #football section article img {
@@ -1104,13 +1085,12 @@ aside .inner .util li i {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 324px;
-  height: 340px;
+  width: 20vw;
+  height: 20vw;
   opacity: 0;
   transform-origin: center center;
   transition: 2s;
   transform: translate(-50%, -50%) rotate(0deg);
-  perspective: 700px;
 }
 #football section .ball img {
   width: 100%;
@@ -1122,49 +1102,46 @@ aside .inner .util li i {
   transform: translate(-50%, -50%) rotate(1080deg);
 }
 #football .custom_zone {
-  width: 1440px;
-  min-height: 900px;
+  width: 80vw;
+  min-height: 50vw;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
 }
 #football .custom_zone figure {
-  width: 711.18px;
-  height: 669.87px;
+  width: 39.5vw;
+  height: 37.2055808656vw;
   border: 1px solid #000;
   overflow: hidden;
   position: relative;
 }
 #football .custom_zone figure img {
   display: block;
-  width: 650px;
-  height: 400px;
-  margin: 40px auto 0;
+  width: 36.5vw;
+  height: 22.4vw;
+  margin: 2vw auto 0;
   object-fit: cover;
 }
 #football .custom_zone figure .con {
-  position: absolute;
-  top: 65%;
-  left: 30px;
-  width: 640px;
-  margin: 40px auto 0;
+  width: 90%;
+  margin: 1vw auto 0;
 }
 #football .custom_zone figure .con h2 {
-  font: bold 40px/1 "Phudu";
+  font: bold 3vw/1 "Phudu";
   letter-spacing: 1px;
-  margin-bottom: 15px;
+  margin-bottom: 0.5vw;
   width: 100%;
 }
 #football .custom_zone figure .con p {
-  font: bold 18px/1 "Phudu";
+  font: bold 1.5vw/1 "Phudu";
   letter-spacing: 1px;
-  margin-bottom: 30px;
+  margin-bottom: 1vw;
 }
 #football .custom_zone figure .con a {
   display: block;
-  width: 200px;
-  height: 50px;
-  font: bold 20px/50px "Phudu";
+  width: 20vw;
+  height: 3vw;
+  font: bold 1.5vw/3vw "Phudu";
   text-align: center;
   background-color: #000;
   border: 1px solid #000;
@@ -1176,8 +1153,8 @@ aside .inner .util li i {
   color: #000;
 }
 #football .custom_zone .vidList {
-  width: 711.18px;
-  height: 669.87px;
+  width: 39.5vw;
+  height: 37.2055808656vw;
   flex-wrap: wrap;
   position: relative;
   overflow: hidden;
@@ -1204,9 +1181,9 @@ aside .inner .util li i {
 }
 #football .custom_zone .vidList .video_frame article .pic {
   display: block;
-  margin: 80px auto 0;
-  width: 650px;
-  height: 350px;
+  margin: 4vw auto 0;
+  width: 36.5vw;
+  height: 22.4vw;
 }
 #football .custom_zone .vidList .video_frame article .pic img {
   width: 100%;
@@ -1215,28 +1192,26 @@ aside .inner .util li i {
   border-radius: 15px;
 }
 #football .custom_zone .vidList .video_frame article .con {
-  width: 640px;
-  margin: 40px auto 0;
-  position: absolute;
-  top: 65%;
-  left: 30px;
+  width: 100%;
+  margin: 1vw auto 0;
+  padding: 0 20px;
 }
 #football .custom_zone .vidList .video_frame article .con h2 {
-  font: bold 40px/1 "Phudu";
+  font: bold 3vw/1 "Phudu";
   letter-spacing: 1px;
-  margin-bottom: 15px;
+  margin-bottom: 0.5vw;
   width: 100%;
 }
 #football .custom_zone .vidList .video_frame article .con p {
-  font: bold 18px/1 "Phudu";
+  font: bold 1.5vw/1 "Phudu";
   letter-spacing: 1px;
-  margin-bottom: 30px;
+  margin-bottom: 1vw;
 }
 #football .custom_zone .vidList .video_frame article .con a {
   display: block;
-  width: 200px;
-  height: 50px;
-  font: bold 20px/50px "Phudu";
+  width: 20vw;
+  height: 3vw;
+  font: bold 1.5vw/3vw "Phudu";
   text-align: center;
   background-color: #000;
   border: 1px solid #000;
