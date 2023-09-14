@@ -5,7 +5,7 @@ const panel_lis = panel.querySelectorAll("li");
 const interval = 3000;
 let len = panel_lis.length;
 
-if(window.innerWidth > 767){
+if(window.innerWidth > 450){
     init();
     setInterval(() => {
         nextSlide();
@@ -103,7 +103,7 @@ if(window.innerWidth > 767){
     })
 }
 
-var mobileWidth = window.matchMedia("screen and (max-width: 768px)");
+var mobileWidth = window.matchMedia("screen and (max-width: 450px)");
 
 if(mobileWidth.matches){
     

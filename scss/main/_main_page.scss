@@ -3,7 +3,7 @@
     width: 100%;
     height: calc(100vw / (16 / 9)); //사진 비율
     overflow: hidden;
-    margin-bottom: 50px;
+    margin-bottom: 3vh;
     .panel{
         // width값을 주지 않은 이유는 자식요소의 width값을 모두 포함해 자동으로 지정되기 때문
         height: 100%;
@@ -24,12 +24,12 @@
 }
 
 #banner{
-    width: 1440px;
+    width: 90vw;
     margin: 0 auto;
     cursor: pointer;
     .imgBox{
         width: 100%;
-        height: 118.62px;
+        height: 7.4vw;
         img{
             width: 100%;
             height: 100%;
@@ -40,8 +40,8 @@
         width: 100%;
         display: flex;
         .videoBox{
-            width: 888px;
-            height: 547px;
+            width: 55.5vw;
+            height: 34vw;
             video{
                 width: 100%;
                 height: 100%;
@@ -49,8 +49,8 @@
             }
         }
         .imgBox{
-            width: 552px;
-            height: 547px;
+            width: 34.5vw;
+            height: 34vw;
             overflow: hidden;
             position: relative;
             .banner_slide{
@@ -96,27 +96,28 @@
 }
 
 #recommend{
-    width: 1440px;
-    height: 465.5px;
-    margin: 100px auto;
+    width: 90vw;
+    height: 29vw;
+    margin: 8vh auto 5vh;
     position: relative;
     &::before{
         content: '';
         position: absolute;
-        top: 12px;
+        top: 1vw;
         left: 0;
-        width: 1440px;
+        width: 90vw;
         height: 2px;
         background-color: #000;
         z-index: -1;
     }
 
     h1{
-        width: 600px;
+        width: 45vw;
+        height: 2vw;
         background-color: #fff;
-        margin: 0 auto 100px;
+        margin: 0 auto ;
         display: block;
-        font: bold 30px/1 "Phudu";
+        font: bold 2vw/1 "Phudu";
         letter-spacing: 1px;
         text-align: center;
     }
@@ -124,7 +125,7 @@
         width: 100%;
         height: 100%;
         position: absolute;
-        top: 100px;
+        top: 8vh;
         overflow: hidden;
         li{
             width: 100%;
@@ -143,11 +144,11 @@
                 left: 110vw;
             }
             article{
-                height: 350px;
+                height: 25vw;
                 cursor: pointer;
                 img{
-                    width: 270px;
-                    height: 270px;
+                    width: 17.5vw;
+                    height: 17.5vw;
                     object-fit: cover;
                 }
                 &:hover{
@@ -171,17 +172,17 @@
                         &.brand{
                             font: 12px/1 "Phudu";
                             color: #999;
-                            margin-top: 20px;
+                            margin-top: 1vh;
                         }
                         &.prod_title{
                             font: 14px/1 "Phudu";
                             color: #999;
-                            margin-top: 10px;
+                            margin-top: 1.0vh;
                         }
                         &.prod_price{
                             font: bold 14px/1 "Phudu";
                             color: #000;
-                            margin-top: 5px;
+                            margin-top: 0.5vh;
                         }
                     }
                 }
@@ -191,7 +192,7 @@
     }
     .prev{
         position: absolute;
-        top: 200px;
+        top: calc(15vh + 2.5vw);
         i{
             font-size: 50px;
         }
@@ -201,7 +202,7 @@
     }
     .next{
         position: absolute;
-        top: 200px;
+        top: calc(15vh + 2.5vw);
         i{
             font-size: 50px;
         }
@@ -215,16 +216,16 @@
     width: 100%;
     overflow: hidden;
     section{
-        width: 1440px;
-        height: 900px;
+        width: 90vw;
+        height: 56.25vw;
         margin: 0 auto;
         position: relative;
         transition: 0.5s;
         overflow: hidden;
         .imgBox{
             width: 100%;
-            height: 600px;
-            margin-bottom: 40px;
+            height: 37.5vw;
+            margin-bottom: 5vh;
             img{
                 width: 100%;
                 height: 100%;
@@ -235,17 +236,17 @@
         .txtBox{
             margin: 0 auto;
             >h1{
-                font: bold 40px/1 "Phudu";
+                font: bold 3vw/1 "Phudu";
                 text-align: center;
                 letter-spacing: 1px;
-                margin-bottom: 20px;
+                margin-bottom: 1vh;
             }
             h2{
-                font: 20px/1 "Phudu";
+                font: 1.5vw/1 "Phudu";
                 text-align: center;
                 letter-spacing: -2px;
                 color: #222;
-                margin-bottom: 30px;
+                margin-bottom: 3vh;
             }
         }
         a{
@@ -271,191 +272,6 @@
     }
 }
 
-@media (min-width : 450px) and (max-width: 1179px){
-    #frame{
-        margin-bottom: 10px;
-        .panel{
-            height: 100%;
-            position: absolute;
-            display: flex;
-            left: -100vw;
-            cursor: pointer;
-            li{
-                width: 100vw;
-                height: 100%;
-               img{
-                width: 100%;
-                height: 100%;
-               } 
-            }
-        }
-        
-    }
-    
-    #banner{
-        width: 100%;
-        .imgBox{
-            height: 10vw;
-        }
-        .item_wrap{
-            .videoBox{
-                width: 60%;
-                height: 42vw;
-            }
-            .imgBox{
-                width: 40%;
-                height: 42vw;
-                
-                .btns{
-                    li{
-                        display: none;
-                    }
-                }
-            }
-            
-        }
-    }
-    
-    #recommend{
-        width: 90%;
-        height: 30vw;
-        margin: 50px auto;
-        &::before{
-            width: 100%;
-        }
-        h1{
-            width: 50%;
-            margin: 0 auto 20px;
-            font: bold 24px/1 "Phudu";
-        }
-        .items_wrap{
-            top: 70px;
-            li{
-                &:nth-of-type(1){
-                    left: -110%;
-                }
-                &:nth-of-type(2){
-                    left: 0%;
-                }
-                &:nth-of-type(3){
-                    left: -110%;
-                }
-                article{
-                    width: 17vw;
-                    height: 17vw;
-                    &:hover{
-                        .txt{
-                            p{
-                                transform: translateY(-15px);
-                            }
-                        }
-                    }
-                    img{
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                    }
-                    .txt{
-                        width: 100%;
-                        padding: 0 2px;
-                        
-                        p{
-                            opacity: 1;
-                            transform: translateY(-15px);
-                            &.brand{
-                                font: 10px/1 "Phudu";
-                                margin-top: 20px;
-                            }
-                            &.prod_title{
-                                font: 12px/1 "Phudu";
-                                margin-top: 7px;
-                            }
-                            &.prod_price{
-                                font: bold 12px/1 "Phudu";
-                                margin-top: 2px;
-                            }
-                        }
-                    }
-                        
-                }
-            }
-        }
-        .prev{
-            top: 150px;
-            i{
-                font-size: 30px;
-            }
-            left: -40px;
-        }
-        .next{
-            top: 150px;
-            i{
-                font-size: 30px;
-            }
-            right: -40px;
-        }
-    }
-    
-    #full_banner{
-        width: 100%;
-        overflow: hidden;
-        section{
-            width: 90vw;
-            height: calc(90vw / (16/9) + 150px);
-            margin: 0 auto;
-            position: relative;
-            transition: 0.5s;
-            overflow: hidden;
-            .imgBox{
-                width: 100%;
-                height: calc(90vw / (16 / 9) - 100px);
-                margin-bottom: 40px;
-                img{
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    cursor: pointer;
-                }
-            }
-            .txtBox{
-                margin: 0 auto;
-                h1{
-                    font: bold 40px/1 "Phudu";
-                    text-align: center;
-                    letter-spacing: 1px;
-                    margin-bottom: 20px;
-                }
-                h2{
-                    font: 20px/1 "Phudu";
-                    text-align: center;
-                    letter-spacing: -2px;
-                    color: #222;
-                    margin-bottom: 30px;
-                }
-            }
-            a{
-                margin: 0 auto;
-                width: 180px;
-                height: 50px;
-                padding: 0 9px;
-                background-color: #fff;
-                border: 1px solid #000;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                cursor: pointer;
-                font: 16px/1 "맑은 고딕";
-                letter-spacing: -1px;
-                color: #000;
-                &:hover{
-                    background-color: #000;
-                    border: 1px solid #fff;
-                    color: #fff;
-                }
-            }
-        }
-    }
-}
 
 @media screen and (max-width : 450px) {
     
@@ -631,6 +447,7 @@
             height: 37vw;
             margin: 0 0 30px 0;
             float: left;
+            overflow: initial;
             .imgBox{
                 height: 19vw;
                 margin-bottom: 10px;

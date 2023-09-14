@@ -1,42 +1,40 @@
 .filter_wrap{
-   width: 250px;
-   height: 300px;
-   position: absolute;
-   top: 300px;
-   left: 60px;
-   .close{
-      position: absolute;
-      right: 0;
-      font-size: 20px
-   }
+   // 전체 width값 10vw
+   width: 10vw;
+   padding: 2vh 2vw 0 0;
    >div{
-      width: 250px;
-      height: 50%;
+      width: 100%;
+      height: 15vh;
       border-bottom: 2px solid #aaa;
       margin-bottom: 20px;
       .filter_tit{
          width: 100%;
-         font: bold 20px/1 "Phudu";
+         font: bold 1.2vw/1 "Phudu";
          letter-spacing: 1.5px;
-         margin-bottom: 30px;
+         margin-bottom: 1.5vh;
+         display: flex;
+         justify-content: space-between;
+         .close{
+            font-size: 1.2vw
+         }
       }
       .filter_sublist{
          display: flex;
-         flex-wrap: wrap;
+         flex-direction: column;
          label{
             width: 100%;
-            margin-bottom: 5px;
+            margin-bottom: 0.3vh;
             &:hover{
                span{
                   color: #111;
                }
             }
             input{
-               width: 12px;
-               height: 12px;
+               width: 1vw;
+               height: 1vw;
             }
             span{
-               font: 13px/1 "arial";
+               font: 1vw/1 "arial";
                color: #aaa;
                
             }
@@ -45,33 +43,7 @@
    }
 }
 
-@media screen and (max-width : 1179px) {
-   .filter_wrap{
-      width: 150px;
-      height: 250px;
-      top: 200px;
-      left: 40px;
-      .close{
-         font-size: 18px
-      }
-      >div{
-         width: 100%;
-         height: 50%;
-         .filter_tit{
-            font: bold 18px/1 "Phudu";
-            margin-bottom: 15px;
-         }
-         .filter_sublist{
-            label{
-               span{
-                  font: 12px/1 "arial";
-               }
-            }
-         }
-      }
-   }
-   
-}
+
 
 @media screen and (max-width: 450px){
    .filter_wrap{

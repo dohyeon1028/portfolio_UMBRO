@@ -5,7 +5,7 @@ footer{
     bottom: 0;
     overflow: hidden;
     .inner{
-        width: 1440px;
+        width: 90vw;
         height: 100%;
         margin: 0 auto;
         padding: 40px 0px;
@@ -15,7 +15,7 @@ footer{
             display: flex;
             justify-content: space-between;
             .footer_body_ul{
-                width: 1029px;
+                width: 70vw;
                 display: flex;
                 ul{
                     padding: 0 6px;
@@ -87,11 +87,11 @@ footer{
             }
         }
         .footer_bottom{
-            width: 1440px;
+            width: 90vw;
             height: 40%;
             bottom: 0;
             .part1{
-                width: 1440px;
+                width: 90vw;
                 height: 20%;
                 display: flex;
                 justify-content: space-between;
@@ -229,141 +229,141 @@ footer{
     }
 }
 
-@media screen and (max-width : 1179px) {
-    footer{
-        height: 350px;
-        .inner{
-            width: 899px;
-            height: 100%;
-            margin: 0 auto;
-            padding: 25px 0px;
-            .footer_body{
-                .footer_body_ul{
-                    width: 650px;
-                    ul{
-                        padding: 0 4px;
-                        &:first-child{
-                            li{
-                                a{
-                                    font: 13px/1 "Phudu";
-                                }
-                            }
-                        }
-                        &:nth-of-type(2),
-                        &:nth-of-type(3){
-                            li{
-                                &:first-child{
-                                    height: 18px;
-                                    a{
-                                        font: 13px/1 "Phudu";
-                                        color: #fff;
-                                    }   
-                                }
-                            }
-                        }
-                        li{
-                            margin-bottom: 5px;
-                            width: 200px;
-                            height: 18px;
-                            a{
-                                font: bold 12px/1 "Phudu"; //글씨체 수정
-                            }
-                        }
-                    }
-                }
-            }
-            .footer_bottom{
-                width: 899px;
-                height: 40%;
-                bottom: 0px;
-                .part1{
-                    width: 100%;
-                    .part1_left{
-                        i{
-                            font-size: 12px;
-                        }
-                        span{
-                            font-size: 9px/1 "맑은 고딕";
-                        }
-                        p{
-                            font-size: 9px/1 "arial";
-                            margin: 0 6px;
-                        }
-                    }
-                    .part1_right{
-                        li{
-                            margin-left: 15px;
-                            a{
-                                font: bold 11px/1 "맑은 고딕";
-                            }
-                        }
-                    }
-                }
-                .part2{
-                    padding-top: 10px;
-                    a, span{
-                        font: 11px/1.2 "맑은 고딕";
-                    }
-                    p{
-                        font: 11px/1.3 "맑은 고딕";
-                        padding: 0 8px 0 8px;
-                    }
-                    .legal_section{
-                        p{
-                            &:first-child{
-                                a{
-                                    top: 45%;
-                                    right: 12px;
-                                    border-radius: 7px;
-                                    padding: 0 4px;
-                                    &:hover{
-                                        background-color: #fff;
-                                        color: #111;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                    .payment_information{
-                        a{
-                            margin: 2px 0 0 0px;
-                            border-radius: 10px;
-                            color: #aaa;
-                            padding: 0 3px;
-                            cursor: pointer;
-                            &:hover{
-                                background-color: #fff;
-                                color: #111;
-                            }
-                        }
-                    }
-                    .legal_moreView{
-                        width: 50%;
-                        padding-top: 30px;
-                        float: left;
-                        p{
-                            font: 12px/1.4 "맑은 고딕";
-                            a{
-                                margin-left: 10px;
-                                border: 1px solid #fff;
-                                border-radius: 10px;
-                                color: #aaa;
-                                padding: 0 3px;
-                                cursor: pointer;
-                                &:hover{
-                                    background-color: #fff;
-                                    color: #111;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
+// @media screen and (max-width : 1179px) {
+//     footer{
+//         height: 350px;
+//         .inner{
+//             width: 899px;
+//             height: 100%;
+//             margin: 0 auto;
+//             padding: 25px 0px;
+//             .footer_body{
+//                 .footer_body_ul{
+//                     width: 650px;
+//                     ul{
+//                         padding: 0 4px;
+//                         &:first-child{
+//                             li{
+//                                 a{
+//                                     font: 13px/1 "Phudu";
+//                                 }
+//                             }
+//                         }
+//                         &:nth-of-type(2),
+//                         &:nth-of-type(3){
+//                             li{
+//                                 &:first-child{
+//                                     height: 18px;
+//                                     a{
+//                                         font: 13px/1 "Phudu";
+//                                         color: #fff;
+//                                     }   
+//                                 }
+//                             }
+//                         }
+//                         li{
+//                             margin-bottom: 5px;
+//                             width: 200px;
+//                             height: 18px;
+//                             a{
+//                                 font: bold 12px/1 "Phudu"; //글씨체 수정
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//             .footer_bottom{
+//                 width: 899px;
+//                 height: 40%;
+//                 bottom: 0px;
+//                 .part1{
+//                     width: 100%;
+//                     .part1_left{
+//                         i{
+//                             font-size: 12px;
+//                         }
+//                         span{
+//                             font-size: 9px/1 "맑은 고딕";
+//                         }
+//                         p{
+//                             font-size: 9px/1 "arial";
+//                             margin: 0 6px;
+//                         }
+//                     }
+//                     .part1_right{
+//                         li{
+//                             margin-left: 15px;
+//                             a{
+//                                 font: bold 11px/1 "맑은 고딕";
+//                             }
+//                         }
+//                     }
+//                 }
+//                 .part2{
+//                     padding-top: 10px;
+//                     a, span{
+//                         font: 11px/1.2 "맑은 고딕";
+//                     }
+//                     p{
+//                         font: 11px/1.3 "맑은 고딕";
+//                         padding: 0 8px 0 8px;
+//                     }
+//                     .legal_section{
+//                         p{
+//                             &:first-child{
+//                                 a{
+//                                     top: 45%;
+//                                     right: 12px;
+//                                     border-radius: 7px;
+//                                     padding: 0 4px;
+//                                     &:hover{
+//                                         background-color: #fff;
+//                                         color: #111;
+//                                     }
+//                                 }
+//                             }
+//                         }
+//                     }
+//                     .payment_information{
+//                         a{
+//                             margin: 2px 0 0 0px;
+//                             border-radius: 10px;
+//                             color: #aaa;
+//                             padding: 0 3px;
+//                             cursor: pointer;
+//                             &:hover{
+//                                 background-color: #fff;
+//                                 color: #111;
+//                             }
+//                         }
+//                     }
+//                     .legal_moreView{
+//                         width: 50%;
+//                         padding-top: 30px;
+//                         float: left;
+//                         p{
+//                             font: 12px/1.4 "맑은 고딕";
+//                             a{
+//                                 margin-left: 10px;
+//                                 border: 1px solid #fff;
+//                                 border-radius: 10px;
+//                                 color: #aaa;
+//                                 padding: 0 3px;
+//                                 cursor: pointer;
+//                                 &:hover{
+//                                     background-color: #fff;
+//                                     color: #111;
+//                                 }
+//                             }
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
 
-@media screen and (max-width : 767px) {
+@media screen and (max-width : 768px) {
     footer{
         height: 150px;
         background-color: #eee;
@@ -421,7 +421,7 @@ footer{
                             a{
                                 font: bold 2vw/1 "맑은 고딕";
                                 color: #555;
-                                letter-spacing: -2px;
+                                letter-spacing: -1px;
                             }
                             &:nth-of-type(2){
                                 a{
