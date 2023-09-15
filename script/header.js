@@ -8,7 +8,7 @@ if(window.innerWidth > 768){
     
         if(scroll < 10){
             header.classList.remove("on"); 
-            headerBox.style.height = `${6 - scroll * 0.15}vw`; // 0.48를 곱한 이유? scroll이 10 이하일 때 10단계로 나누기 위함. 10 이하일 때 height값은 9.6이므로 
+            headerBox.style.height = `${6 - scroll * 0.15}vw`
             
             header.style.height = "6vw";
         } 

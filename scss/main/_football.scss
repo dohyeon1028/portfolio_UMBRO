@@ -65,14 +65,14 @@
         justify-content: space-between;
 
         figure{
-            width: 39.5vw; //711.18px;
-            height: 37.20558086560366vw; //669.87px;
+            width: 39.5vw;
+            height: 37.20558086560366vw;
             border: 1px solid #000;
             overflow: hidden;
             position: relative;
             img {
                 display: block;
-                width: 36.5vw; //650px
+                width: 36.5vw;
                 height: 22.4vw;
                 margin: 2vw auto 0;
                 object-fit: cover;
@@ -114,8 +114,8 @@
         }
 
         .vidList {
-            width: 39.5vw; //711.18px;
-            height: 37.20558086560366vw; //669.87px;
+            width: 39.5vw;
+            height: 37.20558086560366vw;
             flex-wrap: wrap;
             position: relative;
             overflow: hidden;
@@ -143,7 +143,7 @@
                     .pic{
                         display: block;
                         margin: 4vw auto 0;
-                        width: 36.5vw; //650px
+                        width: 36.5vw;
                         height: 20vw;
                         img {
                             width: 100%;
@@ -161,7 +161,6 @@
                             letter-spacing: 1px;
                             margin-bottom: 0.5vw;
                             width: 100%;
-                            // text-overflow: ellipsis;
                         }
             
                         p{
@@ -244,7 +243,7 @@
                         .pic{
                             display: block;
                             margin: 4vw auto 0;
-                            width: 36.5vw; //650px
+                            width: 36.5vw;
                             height: 20vw;
                             img {
                                 width: 100%;

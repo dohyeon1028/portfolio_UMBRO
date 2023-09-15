@@ -1,18 +1,17 @@
 #frame{
     position: relative;
     width: 100vw;
-    height: calc(100vw / (16 / 9)); //사진 비율
+    height: calc(100vw / (16 / 9));
     overflow: hidden;
     margin-bottom: 10vh;
     .panel{
-        // width값을 주지 않은 이유는 자식요소의 width값을 모두 포함해 자동으로 지정되기 때문
         height: 100%;
         position: absolute;
         display: flex;
         left: -100vw;
         cursor: pointer;
         li{
-            width: 100vw; //부모 요소의 width값 100%를 받으면 실질적으로 원하는 값의 3배가 되기 때문에 100vw로 받았다.
+            width: 100vw;
             height: 100%;
            img{
             width: 100%;
@@ -58,7 +57,6 @@
                 height: 100%;
                 position: absolute;
                 transition: 0.5s;
-                // li의 left값은 js에서 동적으로 부여
                 li{
                 position: absolute;
                 width: 100%;
@@ -212,8 +210,8 @@
     width: 100%;
     overflow: hidden;
     section{
-        width: 80vw; //90vw
-        height: 50vw; //56.25
+        width: 80vw;
+        height: 50vw;
         margin: 0 auto;
         position: relative;
         transition: 0.5s;
@@ -342,7 +340,7 @@
             }
             li{
                 width: calc(90vw / 4);
-                padding: 5vh 5px;
+                padding: 2vw 1vw;
                 display: block;
                 float: left;
                 img{
@@ -376,7 +374,7 @@
                             font: bold 1.2vw/1 "Phudu";
                             color: #000;
                             position: absolute;
-                            bottom: 0;
+                            bottom: -1vw;
                             text-align: right;
                         }
                     }

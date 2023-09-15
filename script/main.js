@@ -1,4 +1,3 @@
-// frame
 const frame = document.querySelector("#frame");
 const panel = frame.querySelector(".panel");
 const panel_lis = panel.querySelectorAll("li");
@@ -54,7 +53,6 @@ if(window.innerWidth > 450){
     imgBox_btns.forEach((el, index) => {
         banner_slide_ul.style.left = `0%`
         banner_slide_ul_lis[index].style.left = `${index * 100}%`
-        // 1번째 : 0%, 2번째 : 100%, 3번째 : 200%, 4번째 : 300%
         el.addEventListener("click", ()=>{
             for (const el of imgBox_btns) {
                 el.classList.remove("on");
@@ -64,8 +62,6 @@ if(window.innerWidth > 450){
         })
     });
 
-
-    // recommend
 
     const items_wrap = document.querySelector(".items_wrap");
     const prevBtn = document.querySelector(".prev");
@@ -78,7 +74,6 @@ if(window.innerWidth > 450){
         items_wrap.append(items_wrap.firstElementChild);
     })
 
-    // full banner
 
     const sections = document.querySelectorAll("#full_banner section");
 
@@ -110,7 +105,6 @@ var mobileWidth = window.matchMedia("screen and (max-width: 450px)");
 
 if(mobileWidth.matches){
     
-    //frame
     let startPoint = 0;
     let endPoint = 0;
     
@@ -121,10 +115,8 @@ if(mobileWidth.matches){
         endPoint = e.changedTouches[0].pageX;
         
         if (startPoint < endPoint) {
-            // 오른쪽으로 스와이프 된 경우
             frame_prevMove();
         } else if (startPoint > endPoint) {
-            // 왼쪽으로 스와이프 된 경우
             frame_nextMove();
             
             
@@ -140,9 +132,7 @@ if(mobileWidth.matches){
         panel.append(panel.firstElementChild);
         
     }
-    //frame
 
-    //recommend
     const items_wrap = document.querySelector(".items_wrap");
     const articles = items_wrap.querySelectorAll("article");
 
@@ -166,11 +156,9 @@ if(mobileWidth.matches){
         endPoint = e.changedTouches[0].pageX;
         
         if (startPoint < endPoint) {
-            // 오른쪽으로 스와이프 된 경우
             recommend_prevMove();
             console.log("left");
         } else if (startPoint > endPoint) {
-            // 왼쪽으로 스와이프 된 경우
             console.log("right");
             recommend_nextMove();
             
@@ -186,14 +174,12 @@ if(mobileWidth.matches){
     function recommend_nextMove(){
         items_wrap.append(items_wrap.firstElementChild);
     }
-    //recommend
 
-    //fullbanner
     const full_banner = document.querySelector("#full_banner");
     let eventTitle = `<h1>EVENT</h1>`;
     
     let event = document.createElement("h1");
-    event.innerText = "event"
+    event.innerText = "event";
     full_banner.prepend(event);
-    //fullbanner
+
 }

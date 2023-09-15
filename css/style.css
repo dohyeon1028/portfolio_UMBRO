@@ -586,7 +586,7 @@ aside .inner .util li i {
   }
   #recommend .items_wrap li {
     width: 22.5vw;
-    padding: 5vh 5px;
+    padding: 2vw 1vw;
     display: block;
     float: left;
   }
@@ -623,7 +623,7 @@ aside .inner .util li i {
     font: bold 1.2vw/1 "Phudu";
     color: #000;
     position: absolute;
-    bottom: 0;
+    bottom: -1vw;
     text-align: right;
   }
   #recommend .items_wrap li:nth-of-type(1) {

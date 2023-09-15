@@ -1,5 +1,3 @@
-//자동 슬라이드
-
 if(window.innerWidth > 450){
     const frame = document.querySelector("#frame");
     const panel = frame.querySelector(".panel");
@@ -10,7 +8,6 @@ if(window.innerWidth > 450){
 
     setInterval(() => {
         nextSlide();
-        // youtube_slide();
     }, interval);
 
 
@@ -60,9 +57,6 @@ if(window.innerWidth > 450){
         
     })
 }
-
-
-//youtube
 
 const vidList = document.querySelector(".vidList");
 const video_frame = vidList.querySelector(".video_frame");
