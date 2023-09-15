@@ -21,6 +21,7 @@
       .filter_sublist{
          display: flex;
          flex-direction: column;
+         gap: 0.3vh;
          label{
             width: 100%;
             margin-bottom: 0.3vh;
@@ -30,11 +31,11 @@
                }
             }
             input{
-               width: 1vw;
-               height: 1vw;
+               width: 0.7vw;
+               height: 0.7vw;
             }
             span{
-               font: 1vw/1 "arial";
+               font: 0.8vw/1 "arial";
                color: #aaa;
                
             }

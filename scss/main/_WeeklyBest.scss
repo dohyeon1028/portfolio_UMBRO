@@ -1,7 +1,5 @@
 .BEST_prod_wrap{
    width: 100vw;
-   height: auto;
-   min-height: 100%;
    padding: 4vh 2vw 4vh;
    margin: 0 auto;
    display: flex;
@@ -15,21 +13,22 @@
          height: 7vh;
          letter-spacing: 1px;
          span{
-            font: bold 2vw/100px "Phudu";
+            font: bold 1.5vw/1 "Phudu";
             color: #aaa;
-            margin-left: 10px;
+            margin-left: 1vw;
          }
       }
       section{
          width: 100%;   
          display: flex;
-         gap: calc(0.5vw);
          flex-wrap: wrap;
+         opacity: 1;
+         gap: 0.5vw;
          article{
-            width: 21vw; //360px
-            height: 38.4vw; //660px
-            transform: translateY(0);
-            opacity: 0;
+            width: 21vw;
+            height: 38.4vw;
+            position: relative;
+            opacity: 1;
             transition-duration: 0.5s;
             .imgBox{
                width: 100%;

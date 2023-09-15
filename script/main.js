@@ -4,10 +4,11 @@ const panel = frame.querySelector(".panel");
 const panel_lis = panel.querySelectorAll("li");
 const interval = 3000;
 let len = panel_lis.length;
+let slide;
 
 if(window.innerWidth > 450){
     init();
-    setInterval(() => {
+    slide = setInterval(() => {
         nextSlide();
     }, interval);
 
@@ -85,7 +86,7 @@ if(window.innerWidth > 450){
         (i % 2 == 0) ? sections[i].style.left = "-100%" : sections[i].style.right = "-100%";
         sections[i].style.opacity = "0";
     }
-    const section_Y = [0];
+    const section_Y = [];
     for(let el of sections){
         section_Y.push(el.offsetTop);
     }
@@ -94,13 +95,15 @@ if(window.innerWidth > 450){
         const scroll = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
         
         for(let i = 0; i < 4; i++){
-            if(scroll >= section_Y[i]){
+            if(scroll >= section_Y[i] - 800){
                 (i % 2 == 0) ? sections[i].style.left = "0" : sections[i].style.right = "0";
                 sections[i].style.opacity = "1";
             }
         }
 
     })
+}else{
+    clearInterval(slide);
 }
 
 var mobileWidth = window.matchMedia("screen and (max-width: 450px)");
@@ -120,10 +123,8 @@ if(mobileWidth.matches){
         if (startPoint < endPoint) {
             // 오른쪽으로 스와이프 된 경우
             frame_prevMove();
-            console.log("left");
         } else if (startPoint > endPoint) {
             // 왼쪽으로 스와이프 된 경우
-            console.log("right");
             frame_nextMove();
             
             
@@ -194,4 +195,5 @@ if(mobileWidth.matches){
     let event = document.createElement("h1");
     event.innerText = "event"
     full_banner.prepend(event);
+    //fullbanner
 }

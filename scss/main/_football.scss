@@ -1,10 +1,10 @@
 #football{
-    width: 100vw;
+    width: 100%;
     #frame{
         width: 100%;
         height: 38.5vw;
         position: relative;
-        margin-bottom: 150px;
+        margin-bottom: 10vw;
         .panel{
             width: calc(100% * 4);
             height: 100%;
@@ -79,7 +79,6 @@
             }
     
             .con{
-                
                 width: 90%;
                 margin: 1vw auto 0;
                 h2{
@@ -87,7 +86,6 @@
                     letter-spacing: 1px;
                     margin-bottom: 0.5vw;
                     width: 100%;
-                    // text-overflow: ellipsis;
                 }
     
                 p{
@@ -146,7 +144,7 @@
                         display: block;
                         margin: 4vw auto 0;
                         width: 36.5vw; //650px
-                        height: 22.4vw;
+                        height: 20vw;
                         img {
                             width: 100%;
                             height: 100%;
@@ -156,9 +154,8 @@
                     }
             
                     .con{
-                        width: 100%;
-                        margin: 1vw auto 0;
-                        padding: 0 20px;
+                        width: 36.5vw;
+                        margin: 1.5vw auto 0;
                         h2{
                             font: bold 3vw/1 "Phudu";
                             letter-spacing: 1px;
@@ -198,16 +195,22 @@
                 top: 0; left: 0;
                 background-color: rgba(0, 0, 0, 0.8);
                 overflow: hidden;
-                padding: 5vh 5vw;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                padding: 10vh 10vw;
         
                 .btnClose{
                     position: absolute;
-                    top: 50px;
-                    right: 50px;
-                    color: #fff;
+                    top: 2vw;
+                    right: 2vw;
+                    color: #000;
+                    background-color: #fff;
+                    display: block;
+                    width: 5vw;
+                    height: 5vw;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font: bold 1vw/1 "Phudu";
                     cursor: pointer;
                 }
             }
@@ -215,3 +218,54 @@
     }
 }
 
+@media screen and (max-width : 450px) {
+    #football{
+        .custom_zone{
+            width: 80vw;
+            min-height: 50vw;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+    
+            figure{
+                .con{
+                    width: 90%;
+                    margin: auto atuo;
+                    a{
+                        display: none;
+                    }
+                }
+            
+            }
+    
+            .vidList {
+                .video_frame{
+                    article {
+                        .pic{
+                            display: block;
+                            margin: 4vw auto 0;
+                            width: 36.5vw; //650px
+                            height: 20vw;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                border-radius: 15px;
+                            }
+                        }
+                        .con{
+                            margin: 1vw auto 0;
+                        }
+                    }
+                }
+                .pop{
+                    padding: 21vh 0vw;
+                    .btnClose{
+                        width: 6vw;
+                        height: 6vw;
+                    }
+                }
+            }
+        }
+    }
+}
